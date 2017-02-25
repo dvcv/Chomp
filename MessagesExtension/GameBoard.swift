@@ -28,15 +28,14 @@ struct Info{
 }
 class Game {
     var board = Info().matrix
+    let ROWS = Info().matrix.count
+    let COLS = Info().matrix[0].count
     func selection(_ row:Int , col:Int) -> [[Int]]{
         for i in 0...row{
-            for j in col...(board.count-1){
+            for j in col...(COLS-1){
                 board[i][j] = 0
             }
         }
-        return board
-    }
-    func printBoard() ->  [[Int]] {
         return board
     }
    

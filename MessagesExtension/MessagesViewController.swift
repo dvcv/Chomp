@@ -12,30 +12,70 @@ import Messages
 class MessagesViewController: MSMessagesAppViewController {
     
     let info = Info()
+    var originalGameBoard = Game()
     var gameBoard = Game()
+    let ROWS = Info().matrix.count
+    let COLS = Info().matrix[0].count
+    
+    
+    
+    
+    
+    
+    
+    
+    @IBAction func resetGameBoard(_ sender: Any) {
+        for i in 0...ROWS-1{
+            for j in 0...COLS-1{
+                
+                if(gameBoard.board[i][j] == 0){
+                    let button = view.viewWithTag(originalGameBoard.board[i][j]) as! UIButton
+                    
+                    button.setImage(UIImage(named: "chocolate.png"), for: UIControlState())
+                        
+                    button.isUserInteractionEnabled = true
+                    
+                }
+            }
+        }
+        gameBoard.board = originalGameBoard.board
+
+    }
+    
+    
+    
+    
+    
+    
+    
+   
     
     @IBAction func button(_ sender: AnyObject) {
         
-        let row = info.selectByTag[Int(sender.tag)]!.first
-        let col = info.selectByTag[Int(sender.tag)]!.last
-        gameBoard.selection(row!, col: col!)
+        let row = info.selectByTag[Int(sender.tag)]![0]
+        let col = info.selectByTag[Int(sender.tag)]![1]
+        gameBoard.board = gameBoard.selection(row, col: col)
         
         
-        for i in 1...18{
-            let button = view.viewWithTag(i) as! UIButton
-            
-            
-            
-            
-            
-            button.setImage(nil, for: UIControlState())
-            button.isUserInteractionEnabled = true
+        
+        for i in 0...5{
+            for j in 0...2{
+                
+                if(gameBoard.board[i][j] == 0){
+                    let button = view.viewWithTag(originalGameBoard.board[i][j]) as! UIButton
+                    button.setImage(nil, for: UIControlState())
+                    button.isUserInteractionEnabled = false
+                    
+                }
+            }
         }
-        
-        
         
     }
  
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

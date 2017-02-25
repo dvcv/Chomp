@@ -14,6 +14,7 @@
 		1A78547C1E5D605D00C89EFF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A78547A1E5D605D00C89EFF /* MainInterface.storyboard */; };
 		1A78547E1E5D605D00C89EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A78547D1E5D605D00C89EFF /* Assets.xcassets */; };
 		1A78548A1E5D891300C89EFF /* GameBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7854891E5D891300C89EFF /* GameBoard.swift */; };
+		1A78548E1E60A17D00C89EFF /* chocolate.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A78548D1E60A17D00C89EFF /* chocolate.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1A78547D1E5D605D00C89EFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A78547F1E5D605D00C89EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A7854891E5D891300C89EFF /* GameBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoard.swift; sourceTree = "<group>"; };
+		1A78548D1E60A17D00C89EFF /* chocolate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chocolate.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				1A78547A1E5D605D00C89EFF /* MainInterface.storyboard */,
 				1A7854891E5D891300C89EFF /* GameBoard.swift */,
 				1A78547D1E5D605D00C89EFF /* Assets.xcassets */,
+				1A78548D1E60A17D00C89EFF /* chocolate.png */,
 				1A78547F1E5D605D00C89EFF /* Info.plist */,
 			);
 			path = MessagesExtension;
@@ -206,6 +209,7 @@
 			files = (
 				1A78547E1E5D605D00C89EFF /* Assets.xcassets in Resources */,
 				1A78547C1E5D605D00C89EFF /* MainInterface.storyboard in Resources */,
+				1A78548E1E60A17D00C89EFF /* chocolate.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +413,7 @@
 				1A7854841E5D605D00C89EFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A7854861E5D605D00C89EFF /* Build configuration list for PBXNativeTarget "Chomp" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				1A7854881E5D605D00C89EFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
