@@ -18,38 +18,87 @@ class MessagesViewController: MSMessagesAppViewController {
     let COLS = Info().matrix[0].count
     
     
+    var currentPlayer: String = "1"
+    var caption = "Want to play Chomp?"
+    var session: MSSession?
     
     
     
     
-    
-    
-    @IBAction func resetGameBoard(_ sender: Any) {
+    func prepareURL() -> URL {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https";
+        urlComponents.host = "www.ebookfrenzy.com";
+        let playerQuery = URLQueryItem(name: "currentPlayer",
+                                       value: currentPlayer)
+        
+        urlComponents.queryItems = [playerQuery]
         for i in 0...ROWS-1{
             for j in 0...COLS-1{
-                
-                if(gameBoard.board[i][j] == 0){
-                    let button = view.viewWithTag(originalGameBoard.board[i][j]) as! UIButton
-                    
-                    button.setImage(UIImage(named: "chocolate.png"), for: UIControlState())
-                        
-                    button.isUserInteractionEnabled = true
-                    
-                }
+                let queryItem = URLQueryItem(name: "\(originalGameBoard.board[i][j])",
+                    value: String(gameBoard.board[i][j]))
+                    urlComponents.queryItems?.append(queryItem)
             }
         }
-        gameBoard.board = originalGameBoard.board
+        return urlComponents.url!
+    }
+    
+    func decodeURL(_ url: URL) {
+        
+        let components = URLComponents(url: url,
+                                       resolvingAgainstBaseURL: false)
+        
+        for queryItem in (components?.queryItems)! {
+            
+            if queryItem.name == "currentPlayer" {
+                currentPlayer = queryItem.value == "1" ? "2" : "1"
+            }else if(Int(queryItem.value!) == 0){
+                    let button = view.viewWithTag(Int(queryItem.name)!) as! UIButton
+                    button.setImage(nil, for: UIControlState())
+                    button.isUserInteractionEnabled = false
+                            
+            }
+        }
+                
+        
+    }
+    
+    
+    func prepareMessage(_ url: URL) {
+        
+        let message = MSMessage()
+        
+        let layout = MSMessageTemplateLayout()
+        layout.caption = caption
+        
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size,
+                                               view.isOpaque, 0);
+        self.view.drawHierarchy(in: view.bounds,
+                                    afterScreenUpdates: true)
+        
+        layout.image = UIGraphicsGetImageFromCurrentImageContext()!;
+        UIGraphicsEndImageContext();
 
+        
+        message.layout = layout
+        message.url = url
+        
+        let conversation = self.activeConversation
+        
+        conversation?.insert(message, completionHandler: {(error) in
+            if let error = error {
+                print(error)
+            }
+        })
+        
+        self.dismiss()
     }
     
     
     
+
     
-    
-    
-    
-   
-    
+
     @IBAction func button(_ sender: AnyObject) {
         
         let row = info.selectByTag[Int(sender.tag)]![0]
@@ -70,6 +119,9 @@ class MessagesViewController: MSMessagesAppViewController {
             }
         }
         
+        let url = prepareURL()
+        prepareMessage(url)
+        
     }
  
     
@@ -80,6 +132,7 @@ class MessagesViewController: MSMessagesAppViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print(prepareURL())
     }
     
     override func didReceiveMemoryWarning() {
@@ -94,6 +147,13 @@ class MessagesViewController: MSMessagesAppViewController {
         // This will happen when the extension is about to present UI.
         
         // Use this method to configure the extension and restore previously stored state.
+        
+        if let messageURL = conversation.selectedMessage?.url {
+            decodeURL(messageURL)
+            caption = "It's your move!"
+        }
+        
+        
     }
     
     override func didResignActive(with conversation: MSConversation) {
