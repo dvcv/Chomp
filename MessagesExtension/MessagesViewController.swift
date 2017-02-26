@@ -23,12 +23,13 @@ class MessagesViewController: MSMessagesAppViewController {
     var session: MSSession?
     
     
+    @IBOutlet weak var test: UILabel!
     
     
     func prepareURL() -> URL {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https";
-        urlComponents.host = "www.ebookfrenzy.com";
+        urlComponents.host = "www.apple.com";
         let playerQuery = URLQueryItem(name: "currentPlayer",
                                        value: currentPlayer)
         
@@ -40,7 +41,10 @@ class MessagesViewController: MSMessagesAppViewController {
                     urlComponents.queryItems?.append(queryItem)
             }
         }
+        
         return urlComponents.url!
+       
+        
     }
     
     func decodeURL(_ url: URL) {
@@ -51,11 +55,12 @@ class MessagesViewController: MSMessagesAppViewController {
         for queryItem in (components?.queryItems)! {
             
             if queryItem.name == "currentPlayer" {
+                
                 currentPlayer = queryItem.value == "1" ? "2" : "1"
             }else if(Int(queryItem.value!) == 0){
-                    let button = view.viewWithTag(Int(queryItem.name)!) as! UIButton
-                    button.setImage(nil, for: UIControlState())
-                    button.isUserInteractionEnabled = false
+                let row = info.selectByTag[Int(queryItem.name)!]![0]
+                let col = info.selectByTag[Int(queryItem.name)!]![1]
+                gameBoard.board[row][col] = 0
                             
             }
         }
@@ -66,7 +71,11 @@ class MessagesViewController: MSMessagesAppViewController {
     
     func prepareMessage(_ url: URL) {
         
-        let message = MSMessage()
+        if session == nil {
+            session = MSSession()
+        }
+        
+        let message = MSMessage(session: session!)
         
         let layout = MSMessageTemplateLayout()
         layout.caption = caption
@@ -94,19 +103,23 @@ class MessagesViewController: MSMessagesAppViewController {
         self.dismiss()
     }
     
+    func gameStatus() -> Bool{
+        
     
+        return true
+    }
     
 
     
 
     @IBAction func button(_ sender: AnyObject) {
         
+        if(currentPlayer == "1"){
+        
         let row = info.selectByTag[Int(sender.tag)]![0]
         let col = info.selectByTag[Int(sender.tag)]![1]
         gameBoard.board = gameBoard.selection(row, col: col)
-        
-        
-        
+    
         for i in 0...5{
             for j in 0...2{
                 
@@ -121,6 +134,8 @@ class MessagesViewController: MSMessagesAppViewController {
         
         let url = prepareURL()
         prepareMessage(url)
+            
+        }
         
     }
  
@@ -132,7 +147,7 @@ class MessagesViewController: MSMessagesAppViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(prepareURL())
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -151,7 +166,22 @@ class MessagesViewController: MSMessagesAppViewController {
         if let messageURL = conversation.selectedMessage?.url {
             decodeURL(messageURL)
             caption = "It's your move!"
+            session = conversation.selectedMessage?.session
+            
         }
+        
+        for i in 0...5{
+            for j in 0...2{
+                
+                if(gameBoard.board[i][j] == 0){
+                    let button = view.viewWithTag(originalGameBoard.board[i][j]) as! UIButton
+                    button.setImage(nil, for: UIControlState())
+                    button.isUserInteractionEnabled = false
+                    
+                }
+            }
+        }
+        print(currentPlayer)
         
         
     }
