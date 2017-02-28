@@ -18,20 +18,19 @@ class MessagesViewController: MSMessagesAppViewController {
     let COLS = Info().matrix[0].count
     
     
-    var currentPlayer: String = "1"
+    var gameActive: String = "1"
     var caption = "Want to play Chomp?"
     var session: MSSession?
     
     
-    @IBOutlet weak var test: UILabel!
     
     
     func prepareURL() -> URL {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https";
         urlComponents.host = "www.apple.com";
-        let playerQuery = URLQueryItem(name: "currentPlayer",
-                                       value: currentPlayer)
+        let playerQuery = URLQueryItem(name: "gameActive",
+                                       value: gameActive)
         
         urlComponents.queryItems = [playerQuery]
         for i in 0...ROWS-1{
@@ -48,15 +47,14 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     func decodeURL(_ url: URL) {
-        
         let components = URLComponents(url: url,
                                        resolvingAgainstBaseURL: false)
         
         for queryItem in (components?.queryItems)! {
             
-            if queryItem.name == "currentPlayer" {
+            if queryItem.name == "gameActive" {
                 
-                currentPlayer = queryItem.value == "1" ? "2" : "1"
+                gameActive = queryItem.value == "0" ? "1" : "0"
             }else if(Int(queryItem.value!) == 0){
                 let row = info.selectByTag[Int(queryItem.name)!]![0]
                 let col = info.selectByTag[Int(queryItem.name)!]![1]
@@ -103,23 +101,20 @@ class MessagesViewController: MSMessagesAppViewController {
         self.dismiss()
     }
     
-    func gameStatus() -> Bool{
+    private func isSenderDifferentThanRecipient() -> Bool {
+        guard let conversation = activeConversation else { return true }
+        guard let message = conversation.selectedMessage else { return true }
         
-    
-        return true
+        return message.senderParticipantIdentifier != conversation.localParticipantIdentifier
     }
-    
 
     
 
     @IBAction func button(_ sender: AnyObject) {
-        
-        if(currentPlayer == "1"){
-        
+        if(isSenderDifferentThanRecipient()){
         let row = info.selectByTag[Int(sender.tag)]![0]
         let col = info.selectByTag[Int(sender.tag)]![1]
         gameBoard.board = gameBoard.selection(row, col: col)
-    
         for i in 0...5{
             for j in 0...2{
                 
@@ -131,17 +126,18 @@ class MessagesViewController: MSMessagesAppViewController {
                 }
             }
         }
-        
+            
         let url = prepareURL()
         prepareMessage(url)
-            
-        }
         
+        }
     }
  
     
     
-    
+    func checkForLosingMove() -> Void{
+        
+    }
     
     
     override func viewDidLoad() {
@@ -181,7 +177,7 @@ class MessagesViewController: MSMessagesAppViewController {
                 }
             }
         }
-        print(currentPlayer)
+        print(gameActive)
         
         
     }
@@ -205,6 +201,7 @@ class MessagesViewController: MSMessagesAppViewController {
     
     override func didStartSending(_ message: MSMessage, conversation: MSConversation) {
         // Called when the user taps the send button.
+        
     }
     
     override func didCancelSending(_ message: MSMessage, conversation: MSConversation) {
