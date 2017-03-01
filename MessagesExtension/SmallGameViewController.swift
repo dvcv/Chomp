@@ -9,7 +9,7 @@
 import UIKit
 import Messages
 
-class MessagesViewController: MSMessagesAppViewController {
+class SmallGameViewController: MSMessagesAppViewController {
     
     let info = Info()
     var originalGameBoard = Game()
@@ -45,7 +45,7 @@ class MessagesViewController: MSMessagesAppViewController {
        
         
     }
-    
+
     func decodeURL(_ url: URL) {
         let components = URLComponents(url: url,
                                        resolvingAgainstBaseURL: false)
