@@ -88,6 +88,7 @@ extension MessagesViewController {
             for j in 0...2{
                 
                 if(gameBoard.matrix[i][j] == 0){
+                    controller.gameBoard.matrix[i][j] = 0
                     let button = controller.view.viewWithTag(controller.originalGameBoard.matrix[i][j]) as! UIButton
                     button.setImage(nil, for: UIControlState())
                     button.isUserInteractionEnabled = false
