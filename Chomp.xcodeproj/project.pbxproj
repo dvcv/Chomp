@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A0DA40D1E64FF8600A33578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0DA40C1E64FF8600A33578 /* Assets.xcassets */; };
+		1A3E52BD1E67E86900BA3C2D /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E52BC1E67E86900BA3C2D /* MessageController.swift */; };
 		1A78546A1E5D605D00C89EFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7854691E5D605D00C89EFF /* Assets.xcassets */; };
 		1A7854711E5D605D00C89EFF /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1A7854701E5D605D00C89EFF /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1A7854761E5D605D00C89EFF /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7854751E5D605D00C89EFF /* Messages.framework */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		1A0DA40C1E64FF8600A33578 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A3E52BC1E67E86900BA3C2D /* MessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		1A7854661E5D605D00C89EFF /* Chomp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chomp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7854691E5D605D00C89EFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A78546B1E5D605D00C89EFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				1A9419911E6586A1000D9608 /* Controllers */,
 				1A9419921E6586B5000D9608 /* Models */,
 				1A78547A1E5D605D00C89EFF /* MainInterface.storyboard */,
+				1A3E52BC1E67E86900BA3C2D /* MessageController.swift */,
 				1A0DA40C1E64FF8600A33578 /* Assets.xcassets */,
 				1A78547F1E5D605D00C89EFF /* Info.plist */,
 			);
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A78548A1E5D891300C89EFF /* GameBoard.swift in Sources */,
+				1A3E52BD1E67E86900BA3C2D /* MessageController.swift in Sources */,
 				1A7854791E5D605D00C89EFF /* SmallGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

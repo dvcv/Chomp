@@ -53,27 +53,3 @@ extension GameModel{
     }
 }
 
-
-extension GameModel {
-    func encode(model: String) -> URL {
-        var urlComponents = URLComponents()
-        urlComponents.scheme = "https";
-        urlComponents.host = "www.apple.com";
-        let playerQuery = URLQueryItem(name: "gameActive",
-                                       value: model)
-        urlComponents.queryItems = [playerQuery]
-        let ROWS = GameModel(model: model).matrix.count
-        let COLS = GameModel(model: model).matrix[0].count
-        var originalGameBoard = GameModel(model: model).matrix
-        for i in 0...ROWS-1{
-            for j in 0...COLS-1{
-                let queryItem = URLQueryItem(name: "\(originalGameBoard[i][j])",
-                    value: String(originalGameBoard[i][j]))
-                urlComponents.queryItems?.append(queryItem)
-            }
-        }
-        
-        return urlComponents.url!
-    }
-}
-

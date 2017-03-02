@@ -45,7 +45,7 @@ class SmallGameViewController: MSMessagesAppViewController {
        
         
     }
-
+    
     func decodeURL(_ url: URL) {
         let components = URLComponents(url: url,
                                        resolvingAgainstBaseURL: false)

@@ -236,9 +236,20 @@
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="XPp-B1-yK7"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4e-aH-e3P">
+                                <rect key="frame" x="164" y="508" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="XYi-lL-XTb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="sendLabel" destination="U4e-aH-e3P" id="ibN-3i-xW1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YlN-6G-QgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
