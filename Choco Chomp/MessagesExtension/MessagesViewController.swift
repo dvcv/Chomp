@@ -10,6 +10,9 @@ import UIKit
 import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
+    
+    var gameActive: String = "Small"
+    
     override func willBecomeActive(with conversation: MSConversation) {
         configureChildViewController(for: presentationStyle, with: conversation)
     }
@@ -37,9 +40,13 @@ extension MessagesViewController {
         case .compact:
             childViewController = createMenuViewController()
         case .expanded:
-            childViewController = createMenuViewController()
+            if(conversation.selectedMessage == nil){
+                childViewController = createMenuViewController()
+            }else{
+                childViewController = createSmallGameViewController()
+            }
         }
-        
+       
         // Add controller
         addChildViewController(childViewController)
         childViewController.view.frame = view.bounds
@@ -54,17 +61,44 @@ extension MessagesViewController {
         childViewController.didMove(toParentViewController: self)
     }
     
+    fileprivate func createSmallGameViewController() -> UIViewController {
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: "SmallGameViewController") as? SmallGameViewController else {
+            fatalError("Cannot instantiate view controller")
+        }
+        
+        return controller
+    }
+    
     fileprivate func createMenuViewController() -> UIViewController {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController else {
             fatalError("Cannot instantiate view controller")
         }
-        
         controller.onButtonTap = {
             [unowned self] in
             self.requestPresentationStyle(.expanded)
+            self.gameActive = controller.gameSize
+            print(self.gameActive)
         }
-        
         return controller
+    }
+}
+
+extension MessagesViewController {
+    /// Constructs a message and inserts it into the conversation
+    func insertMessageWith(caption: String,
+                           _ model: GameModel,
+                           _ session: MSSession,
+                           _ image: UIImage,
+                           in conversation: MSConversation) {
+        let message = MSMessage(session: session)
+        let template = MSMessageTemplateLayout()
+        template.image = image
+        template.caption = caption
+        message.layout = template
+        //message.url = model.encode()
+        
+        // Now we've constructed the message, insert it into the conversation
+        conversation.insert(message)
     }
 }
 

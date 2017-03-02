@@ -14,6 +14,8 @@
 		1A3E52A91E677D0100BA3C2D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3E52A71E677D0100BA3C2D /* MainInterface.storyboard */; };
 		1A3E52AB1E677D0100BA3C2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A3E52AA1E677D0100BA3C2D /* Assets.xcassets */; };
 		1A3E52B71E67838800BA3C2D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E52B61E67838800BA3C2D /* MenuViewController.swift */; };
+		1A3E52B91E67892E00BA3C2D /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E52B81E67892E00BA3C2D /* GameModel.swift */; };
+		1A3E52BB1E678B0300BA3C2D /* SmallGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E52BA1E678B0300BA3C2D /* SmallGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		1A3E52AA1E677D0100BA3C2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A3E52AC1E677D0100BA3C2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A3E52B61E67838800BA3C2D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		1A3E52B81E67892E00BA3C2D /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		1A3E52BA1E678B0300BA3C2D /* SmallGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				1A3E52A51E677D0100BA3C2D /* MessagesViewController.swift */,
+				1A3E52BA1E678B0300BA3C2D /* SmallGameViewController.swift */,
 				1A3E52B61E67838800BA3C2D /* MenuViewController.swift */,
 				1A3E52A71E677D0100BA3C2D /* MainInterface.storyboard */,
+				1A3E52B81E67892E00BA3C2D /* GameModel.swift */,
 				1A3E52AA1E677D0100BA3C2D /* Assets.xcassets */,
 				1A3E52AC1E677D0100BA3C2D /* Info.plist */,
 			);
@@ -218,6 +224,8 @@
 			files = (
 				1A3E52A61E677D0100BA3C2D /* MessagesViewController.swift in Sources */,
 				1A3E52B71E67838800BA3C2D /* MenuViewController.swift in Sources */,
+				1A3E52BB1E678B0300BA3C2D /* SmallGameViewController.swift in Sources */,
+				1A3E52B91E67892E00BA3C2D /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +417,7 @@
 				1A3E52B11E677D0100BA3C2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A3E52B31E677D0100BA3C2D /* Build configuration list for PBXNativeTarget "Choco Chomp" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +426,7 @@
 				1A3E52B51E677D0100BA3C2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
