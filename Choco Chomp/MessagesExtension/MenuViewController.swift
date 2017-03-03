@@ -13,24 +13,13 @@ class MenuViewController: UIViewController {
     var onButtonTap: ((Void) -> Void)?
     
     var gameSize: String = "Small"
-    
-    @IBAction func gameSizeButtons(_ sender: AnyObject) {
-        switch sender.tag {
-        case 1:
-            gameSize = "Small"
-        case 2:
-            gameSize = "Medium"
-        case 3:
-            gameSize = "Large"
-        default:
-            gameSize = "Small"
-        }
-        
-    }
-    
-    
+
+    @IBOutlet weak var playGameLabel: UIButton!
     
     @IBAction func startGame(_ sender: AnyObject) {
         onButtonTap?()
+        playGameLabel.isHidden = true
     }
+    
+
 }

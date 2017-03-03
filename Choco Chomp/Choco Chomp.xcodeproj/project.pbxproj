@@ -17,6 +17,7 @@
 		1A3E52B91E67892E00BA3C2D /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E52B81E67892E00BA3C2D /* GameModel.swift */; };
 		1A3E52BB1E678B0300BA3C2D /* SmallGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E52BA1E678B0300BA3C2D /* SmallGameViewController.swift */; };
 		1A3E52BF1E68099500BA3C2D /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E52BE1E68099500BA3C2D /* Snapshot.swift */; };
+		1A3E52C11E69233E00BA3C2D /* MediumGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E52C01E69233E00BA3C2D /* MediumGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		1A3E52B81E67892E00BA3C2D /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		1A3E52BA1E678B0300BA3C2D /* SmallGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallGameViewController.swift; sourceTree = "<group>"; };
 		1A3E52BE1E68099500BA3C2D /* Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
+		1A3E52C01E69233E00BA3C2D /* MediumGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +114,9 @@
 			children = (
 				1A3E52A51E677D0100BA3C2D /* MessagesViewController.swift */,
 				1A3E52BE1E68099500BA3C2D /* Snapshot.swift */,
-				1A3E52B61E67838800BA3C2D /* MenuViewController.swift */,
 				1A3E52BA1E678B0300BA3C2D /* SmallGameViewController.swift */,
+				1A3E52B61E67838800BA3C2D /* MenuViewController.swift */,
+				1A3E52C01E69233E00BA3C2D /* MediumGameViewController.swift */,
 				1A3E52A71E677D0100BA3C2D /* MainInterface.storyboard */,
 				1A3E52B81E67892E00BA3C2D /* GameModel.swift */,
 				1A3E52AA1E677D0100BA3C2D /* Assets.xcassets */,
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A3E52A61E677D0100BA3C2D /* MessagesViewController.swift in Sources */,
+				1A3E52C11E69233E00BA3C2D /* MediumGameViewController.swift in Sources */,
 				1A3E52B71E67838800BA3C2D /* MenuViewController.swift in Sources */,
 				1A3E52BB1E678B0300BA3C2D /* SmallGameViewController.swift in Sources */,
 				1A3E52B91E67892E00BA3C2D /* GameModel.swift in Sources */,

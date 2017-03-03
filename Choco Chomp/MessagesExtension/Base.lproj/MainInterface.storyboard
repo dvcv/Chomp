@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -37,48 +37,31 @@
                         <viewControllerLayoutGuide type="bottom" id="U4H-Au-kcO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rYt-KA-BqF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVF-Ye-hHM">
-                                <rect key="frame" x="148" y="318" width="78" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="foil" translatesAutoresizingMaskIntoConstraints="NO" id="Rxo-RX-aSf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Game"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVF-Ye-hHM">
+                                <rect key="frame" x="13.5" y="139" width="293" height="178.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start Game" image="playGame"/>
                                 <connections>
                                     <action selector="startGame:" destination="uUJ-wJ-oJT" eventType="touchUpInside" id="fc4-bZ-MlE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Min-li-R97">
-                                <rect key="frame" x="16" y="180" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Small"/>
-                                <connections>
-                                    <action selector="gameSizeButtons:" destination="uUJ-wJ-oJT" eventType="touchDown" id="IG0-JW-jPM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jA-p3-qWQ">
-                                <rect key="frame" x="313" y="180" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Large"/>
-                                <connections>
-                                    <action selector="gameSizeButtons:" destination="uUJ-wJ-oJT" eventType="touchUpInside" id="E3s-R3-ot7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9J-aW-Rj0">
-                                <rect key="frame" x="160" y="180" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Medium"/>
-                                <connections>
-                                    <action selector="gameSizeButtons:" destination="uUJ-wJ-oJT" eventType="touchUpInside" id="RlF-Uc-5d7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="playGameLabel" destination="UVF-Ye-hHM" id="h7B-ry-Pzc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CfC-DA-kYz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874" y="-20"/>
+            <point key="canvasLocation" x="872.79999999999995" y="-20.239880059970016"/>
         </scene>
         <!--Small Game View Controller-->
         <scene sceneID="BG0-Yt-Hjx">
@@ -89,156 +72,169 @@
                         <viewControllerLayoutGuide type="bottom" id="bVS-mf-P1w"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OqP-n1-Ui9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhW-3s-xGS">
-                                <rect key="frame" x="212" y="183" width="50" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="foil" translatesAutoresizingMaskIntoConstraints="NO" id="c2J-Cj-dR8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="485"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Lost" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Kc-CL-p7b">
+                                <rect key="frame" x="95.5" y="131.5" width="128" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DhW-3s-xGS">
+                                <rect key="frame" x="181" y="131.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="wTB-Rh-flS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqL-bD-9gQ">
-                                <rect key="frame" x="162" y="183" width="50" height="50"/>
+                                <rect key="frame" x="138" y="131.5" width="43" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="LVz-kY-BfZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnf-th-pnC">
-                                <rect key="frame" x="112" y="183" width="50" height="50"/>
+                                <rect key="frame" x="95.5" y="131.5" width="42.5" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="3uy-GK-dk4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUK-c3-Sq3">
-                                <rect key="frame" x="212" y="233" width="50" height="50"/>
+                                <rect key="frame" x="181" y="167.5" width="42.5" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="D2k-FF-WVr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1N-fg-EWy">
-                                <rect key="frame" x="162" y="233" width="50" height="50"/>
+                                <rect key="frame" x="138" y="167.5" width="43" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="ZhN-M4-VY0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiC-1B-EtJ">
-                                <rect key="frame" x="112" y="233" width="50" height="50"/>
+                                <rect key="frame" x="95.5" y="167.5" width="42.5" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="dGA-Mc-XI7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-il-NVP">
-                                <rect key="frame" x="212" y="283" width="50" height="50"/>
+                                <rect key="frame" x="181" y="203.5" width="42.5" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="RwE-qR-Vxq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUy-SQ-F97">
-                                <rect key="frame" x="162" y="283" width="50" height="50"/>
+                                <rect key="frame" x="138" y="203.5" width="43" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="SuQ-XB-GYt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8f-w1-n1V">
-                                <rect key="frame" x="112" y="283" width="50" height="50"/>
+                                <rect key="frame" x="95.5" y="203.5" width="42.5" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="084-mg-3XA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yex-0Z-Wfx">
-                                <rect key="frame" x="212" y="333" width="50" height="50"/>
+                                <rect key="frame" x="181" y="239.5" width="42.5" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="fcG-5Y-ndF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFN-jt-G6u">
-                                <rect key="frame" x="162" y="333" width="50" height="50"/>
+                                <rect key="frame" x="138" y="239.5" width="43" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="QeD-cd-Peg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1h-Kk-ezX">
-                                <rect key="frame" x="112" y="333" width="50" height="50"/>
+                                <rect key="frame" x="95.5" y="239.5" width="42.5" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="pce-7f-VhT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0G-2s-A2O">
-                                <rect key="frame" x="212" y="383" width="50" height="50"/>
+                                <rect key="frame" x="181" y="275.5" width="42.5" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="M8M-T1-6Bv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ck-bV-GWb">
-                                <rect key="frame" x="162" y="383" width="50" height="50"/>
+                                <rect key="frame" x="138" y="275.5" width="43" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="0Kr-iD-q3v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAP-ll-8BG">
-                                <rect key="frame" x="112" y="383" width="50" height="50"/>
+                                <rect key="frame" x="95.5" y="275.5" width="42.5" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="6ur-wu-NRT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uv-wG-pBu">
-                                <rect key="frame" x="212" y="433" width="50" height="50"/>
+                                <rect key="frame" x="181" y="311.5" width="42.5" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="YMt-1R-bKC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9C-NE-mhA">
-                                <rect key="frame" x="162" y="433" width="50" height="50"/>
+                                <rect key="frame" x="138" y="311.5" width="43" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="vEe-4I-50I"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozd-9e-ekn">
-                                <rect key="frame" x="112" y="433" width="50" height="50"/>
+                                <rect key="frame" x="95.5" y="311.5" width="42.5" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="chocolate"/>
+                                <state key="normal" image="chocolate"/>
                                 <connections>
                                     <action selector="chocolateButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="XPp-B1-yK7"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4e-aH-e3P">
-                                <rect key="frame" x="164" y="508" width="46" height="30"/>
+                                <rect key="frame" x="136.5" y="359" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Send"/>
                                 <connections>
                                     <action selector="sendButton:" destination="hBS-AF-tln" eventType="touchUpInside" id="XYi-lL-XTb"/>
@@ -249,68 +245,395 @@
                     </view>
                     <connections>
                         <outlet property="sendLabel" destination="U4e-aH-e3P" id="ibN-3i-xW1"/>
+                        <outlet property="youLostLabel" destination="1Kc-CL-p7b" id="V52-5S-QC7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YlN-6G-QgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1624.8" y="-26.53673163418291"/>
         </scene>
-        <!--View Controller-->
+        <!--Medium Game View Controller-->
         <scene sceneID="aiL-ht-Qb1">
             <objects>
-                <viewController id="GVl-YT-IKp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MediumGameViewController" id="GVl-YT-IKp" customClass="MediumGameViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v0F-wX-UsC"/>
                         <viewControllerLayoutGuide type="bottom" id="0Pq-5Q-CcK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wlv-3m-ked">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vem-h2-5Ro">
-                                <rect key="frame" x="156" y="323" width="62" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="foil" translatesAutoresizingMaskIntoConstraints="NO" id="bHV-l6-w0r">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="485"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQ7-Hu-8Kc" userLabel="PictureView">
+                                <rect key="frame" x="53" y="99" width="213" height="288"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Lost" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRg-wh-v0H">
+                                <rect key="frame" x="53" y="98.5" width="213" height="288"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ww4-Ug-h0c">
+                                <rect key="frame" x="53" y="98.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="Lcc-Aw-Hfh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yk7-2a-sKB">
+                                <rect key="frame" x="95.5" y="98.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="PTF-Kd-MKL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qn5-ay-3Ua">
+                                <rect key="frame" x="138" y="98.5" width="43" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="TxM-DG-ZLl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6W-lc-WnO">
+                                <rect key="frame" x="181" y="98.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="exy-Re-yEA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1Y-RI-Y1z">
+                                <rect key="frame" x="223.5" y="98.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="Ogb-gQ-XFb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ll1-aM-rZP">
+                                <rect key="frame" x="53" y="134.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="Wjd-K3-bS0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6P-nu-ovC">
+                                <rect key="frame" x="95.5" y="134.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="1I7-jy-buk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiB-wd-0FS">
+                                <rect key="frame" x="138" y="134.5" width="43" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="7Ym-iU-MME"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZq-m1-6rw">
+                                <rect key="frame" x="181" y="134.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="bWx-jS-KXb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSP-Zk-3Kh">
+                                <rect key="frame" x="223.5" y="134.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="X2a-ho-gAc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z41-yN-DDG">
+                                <rect key="frame" x="53" y="170.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="Vn2-Sy-rpj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ph-qM-CbV">
+                                <rect key="frame" x="95.5" y="170.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="Fas-Jc-mnA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQN-q4-Eft">
+                                <rect key="frame" x="138" y="170.5" width="43" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="yN6-ne-jlH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhb-bw-HBb">
+                                <rect key="frame" x="181" y="170.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="Y7f-Au-Sfa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLp-Rj-ENo">
+                                <rect key="frame" x="223.5" y="170.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="XU0-JM-dBb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WO0-yo-wOQ">
+                                <rect key="frame" x="53" y="206.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="5PG-iB-tSF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8t-NO-wdK">
+                                <rect key="frame" x="95.5" y="206.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="ziz-Gh-GuW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwN-98-0lV">
+                                <rect key="frame" x="138" y="206.5" width="43" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="8wN-JU-oL9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBC-WQ-8ni">
+                                <rect key="frame" x="181" y="206.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="EpX-Tn-13j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkV-ed-SVm">
+                                <rect key="frame" x="223.5" y="206.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="kmw-GK-Tre"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5P-LN-kVC">
+                                <rect key="frame" x="53" y="242.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="i6S-rF-nEs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="22" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cg3-hR-MKz">
+                                <rect key="frame" x="95.5" y="242.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="U47-qi-kno"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="23" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiW-v0-PJu">
+                                <rect key="frame" x="138" y="242.5" width="43" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="OX1-1r-Vm1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="24" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myh-Hy-l2H">
+                                <rect key="frame" x="181" y="242.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="FCg-s9-7I7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="25" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HV-Tp-EhF">
+                                <rect key="frame" x="223.5" y="242.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="a39-25-boE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="26" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Stm-Vc-UxT">
+                                <rect key="frame" x="53" y="278.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="NpB-hY-wcu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="27" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KfG-db-cWi">
+                                <rect key="frame" x="95.5" y="278.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="vqa-2n-vFM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="28" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahd-wS-0zd">
+                                <rect key="frame" x="138" y="278.5" width="43" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="TpQ-9n-O73"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="29" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCt-hl-R5b">
+                                <rect key="frame" x="181" y="278.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="oOx-XH-Ubh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="30" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5E-0g-dJM">
+                                <rect key="frame" x="223.5" y="278.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="BwN-lG-p5G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="31" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wio-Eq-jvo">
+                                <rect key="frame" x="53" y="314.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="qJZ-J8-ifB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="32" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moK-Hz-gqz">
+                                <rect key="frame" x="95.5" y="314.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="lRo-bn-kzJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="33" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7E-G2-9wY">
+                                <rect key="frame" x="138" y="314.5" width="43" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="O0V-FD-nUR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="34" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctN-al-oP9">
+                                <rect key="frame" x="181" y="314.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="kTV-Tk-xBH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="35" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJT-OZ-1T0">
+                                <rect key="frame" x="223.5" y="314.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="dmO-WK-rn1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="36" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaz-l1-KTo">
+                                <rect key="frame" x="53" y="350.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="U2M-sY-Ule"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="37" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qm-tA-jLD">
+                                <rect key="frame" x="95.5" y="350.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="bGn-XP-d3x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="38" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bX-4c-rMt">
+                                <rect key="frame" x="138" y="350.5" width="43" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="fOf-DR-4ey"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="39" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Php-GO-bbw">
+                                <rect key="frame" x="181" y="350.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="EpT-UM-dPB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="40" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlS-qa-VBE">
+                                <rect key="frame" x="223.5" y="350.5" width="42.5" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="chocolate"/>
+                                <connections>
+                                    <action selector="chocolateButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="aPK-r4-cZz"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZK8-Bk-7qD">
+                                <rect key="frame" x="136.5" y="399" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="sendButton:" destination="GVl-YT-IKp" eventType="touchUpInside" id="OBJ-W9-pg1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choco Chomp" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMe-j8-5kT">
+                                <rect key="frame" x="13.5" y="44" width="293" height="72.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="3" height="0.0"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="sendLabel" destination="ZK8-Bk-7qD" id="C6o-zn-z6X"/>
+                        <outlet property="youLostLabel" destination="cRg-wh-v0H" id="Wbt-om-OhA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGv-Th-Dto" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1625" y="641"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="9GP-wh-BzF">
-            <objects>
-                <viewController id="ioM-wK-ABb" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UN4-zC-zHc"/>
-                        <viewControllerLayoutGuide type="bottom" id="3rS-VS-bYJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BLW-ma-YDz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Large" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEt-lx-suD">
-                                <rect key="frame" x="165" y="323" width="44" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ThW-ER-Ezi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1625" y="1305"/>
+            <point key="canvasLocation" x="1623.75" y="640"/>
         </scene>
     </scenes>
     <resources>
         <image name="chocolate" width="770" height="756"/>
+        <image name="foil" width="1300" height="864"/>
+        <image name="playGame" width="672" height="336"/>
     </resources>
 </document>

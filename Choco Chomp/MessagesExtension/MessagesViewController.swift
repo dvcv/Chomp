@@ -11,11 +11,9 @@ import Messages
 
 class MessagesViewController: MSMessagesAppViewController {
     
-    var originalGameBoard = GameModel(model: "Small")
-    var gameBoard = GameModel(model: "Small")
-    
-    
-    var gameActive: String = "Small"
+    var originalGameBoard = GameModel(model: "Medium")
+    var gameBoard = GameModel(model: "Medium")
+    var gameActive: String = "Medium"
     var caption = "Want to play Chomp?"
     var session: MSSession?
     
@@ -24,10 +22,16 @@ class MessagesViewController: MSMessagesAppViewController {
     override func willBecomeActive(with conversation: MSConversation) {
         if let messageURL = conversation.selectedMessage?.url {
             self.decodeURL(messageURL)
-            caption = "It's your move!"
+            let player = "$\(conversation.localParticipantIdentifier)"
+            let player2 = "$\(activeConversation?.selectedMessage?.senderParticipantIdentifier)"
+            print(player + " " + player2)
+            caption = player + " chomped the chocolate, it's your move!"
             session = conversation.selectedMessage?.session
-            print(messageURL)
+            if(self.isSenderSameAsRecipient()){
+                print("Same")
+            }
         }
+        
         configureChildViewController(for: presentationStyle, with: conversation)
 
     }
@@ -35,6 +39,7 @@ class MessagesViewController: MSMessagesAppViewController {
     override func willTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
         guard let conversation = self.activeConversation else { return }
         configureChildViewController(for: presentationStyle, with: conversation)
+        
     }
 }
 
@@ -55,14 +60,7 @@ extension MessagesViewController {
         case .compact:
             childViewController = createMenuViewController()
         case .expanded:
-            if(gameActive == "Small"){
-                childViewController = createSmallGameViewController(with: conversation)
-            }else if(gameActive == "Medium"){
-                childViewController = createSmallGameViewController(with: conversation)
-            }else{
-                childViewController = createSmallGameViewController(with: conversation)
-            }
-
+                childViewController = createMediumGameViewController(with: conversation)
         }
        
         // Add controller
@@ -78,14 +76,26 @@ extension MessagesViewController {
         
         childViewController.didMove(toParentViewController: self)
     }
-    
-    fileprivate func createSmallGameViewController(with conversation: MSConversation) -> UIViewController {
-        guard let controller = storyboard?.instantiateViewController(withIdentifier: "SmallGameViewController") as? SmallGameViewController else {
+   
+    //Medium
+    fileprivate func createMediumGameViewController(with conversation: MSConversation) -> UIViewController {
+        guard let controller = storyboard?.instantiateViewController(withIdentifier: "MediumGameViewController") as? MediumGameViewController else {
             fatalError("Cannot instantiate view controller")
         }
-        print(gameBoard.matrix)
-        for i in 0...5{
-            for j in 0...2{
+        
+        
+        if(isSenderSameAsRecipient()){
+            for i in 0...controller.ROWS - 1{
+                for j in 0...controller.COLS - 1{
+                    let button = controller.view.viewWithTag(controller.originalGameBoard.matrix[i][j]) as! UIButton
+                    button.isUserInteractionEnabled = false
+                    
+                }
+            }
+        }
+        
+        for i in 0...controller.ROWS - 1{
+            for j in 0...controller.COLS - 1{
                 
                 if(gameBoard.matrix[i][j] == 0){
                     controller.gameBoard.matrix[i][j] = 0
@@ -98,16 +108,16 @@ extension MessagesViewController {
         }
         
         controller.onSendTap = {
+            controller.sendLabel.isHidden = true
             let url = controller.prepareURL()
             let image = UIImage.snapshot(from: controller.view)
-            let session = MSSession()
-            self.insertMessageWith(caption: self.caption, session, url, image)
+            self.insertMessageWith(caption: self.caption, session: self.session, url, image)
             self.dismiss()
         }
         
         return controller
     }
-    
+    //Menu
     fileprivate func createMenuViewController() -> UIViewController {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController else {
             fatalError("Cannot instantiate view controller")
@@ -115,7 +125,7 @@ extension MessagesViewController {
         controller.onButtonTap = {
             [unowned self] in
             self.requestPresentationStyle(.expanded)
-            self.gameActive = controller.gameSize
+            
         }
         return controller
     }
@@ -124,10 +134,16 @@ extension MessagesViewController {
 extension MessagesViewController {
     /// Constructs a message and inserts it into the conversation
     func insertMessageWith(caption: String,
-                           _ session: MSSession,
+                           session: MSSession?,
                            _ url: URL,
                            _ image: UIImage) {
-        let message = MSMessage(session: session)
+        var session = session
+        if session == nil {
+            self.session = MSSession()
+            session = self.session
+        }
+        
+        let message = MSMessage(session: session!)
         let template = MSMessageTemplateLayout()
         template.image = image
         template.caption = caption
@@ -151,6 +167,7 @@ extension MessagesViewController {
             if queryItem.name == "gameActive" {
                 
                 gameActive = queryItem.value!
+                self.gameActive = queryItem.value!
             }else if(Int(queryItem.value!) == 0){
                 let row = gameBoard.selectByTag[Int(queryItem.name)!]![0]
                 let col = gameBoard.selectByTag[Int(queryItem.name)!]![1]
@@ -160,6 +177,15 @@ extension MessagesViewController {
         }
         
         
+    }
+}
+
+extension MessagesViewController {
+    fileprivate func isSenderSameAsRecipient() -> Bool{
+
+        guard let conversation = activeConversation else { return false }
+        guard let message = conversation.selectedMessage else { return false }
+        return message.senderParticipantIdentifier == conversation.localParticipantIdentifier
     }
 }
 

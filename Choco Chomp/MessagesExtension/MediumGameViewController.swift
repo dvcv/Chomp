@@ -1,21 +1,22 @@
 //
-//  SmallGameViewController.swift
+//  MediumGameViewController.swift
 //  Choco Chomp
 //
-//  Created by David Chavez on 3/1/17.
+//  Created by David Chavez on 3/2/17.
 //  Copyright © 2017 David Chavez. All rights reserved.
 //
+
 import UIKit
 import Messages
 
-class SmallGameViewController: UIViewController {
+class MediumGameViewController: UIViewController {
     
     var onSendTap: ((Void) -> Void)?
-    let gameActive = "Small"
-    var originalGameBoard = GameModel(model: "Small")
-    var gameBoard = GameModel(model: "Small")
-    let ROWS = GameModel(model: "Small").matrix.count
-    let COLS = GameModel(model: "Small").matrix[0].count
+    let gameActive = "Medium"
+    var originalGameBoard = GameModel(model: "Medium")
+    var gameBoard = GameModel(model: "Medium")
+    let ROWS = GameModel(model: "Medium").matrix.count
+    let COLS = GameModel(model: "Medium").matrix[0].count
     
     @IBOutlet weak var sendLabel: UIButton!
     
@@ -54,11 +55,11 @@ class SmallGameViewController: UIViewController {
     }
     
     
-
+    
     
     @IBAction func chocolateButton(_ sender: AnyObject) {
-        let row = GameModel(model: "Small").selectByTag[Int(sender.tag)]![0]
-        let col = GameModel(model: "Small").selectByTag[Int(sender.tag)]![1]
+        let row = GameModel(model: "Medium").selectByTag[Int(sender.tag)]![0]
+        let col = GameModel(model: "Medium").selectByTag[Int(sender.tag)]![1]
         gameBoard.matrix = selection(row, col: col)
         for i in 0...ROWS-1{
             for j in 0...COLS-1{
@@ -82,7 +83,7 @@ class SmallGameViewController: UIViewController {
     }
     
     
-    @IBAction func sendButton(_ sender: Any) {
+    @IBAction func sendButton(_ sender: AnyObject) {
         youLostLabel.text = "You Won!"
         onSendTap?()
         
@@ -96,4 +97,3 @@ class SmallGameViewController: UIViewController {
     }
     
 }
-
