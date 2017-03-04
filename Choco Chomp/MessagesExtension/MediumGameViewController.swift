@@ -12,6 +12,8 @@ import Messages
 class MediumGameViewController: UIViewController {
     
     var onSendTap: ((Void) -> Void)?
+    var onHowToPlayTap: ((Void) -> Void)?
+    var onChocolateTap: ((Void) -> Bool)?
     let gameActive = "Medium"
     var originalGameBoard = GameModel(model: "Medium")
     var gameBoard = GameModel(model: "Medium")
@@ -21,6 +23,9 @@ class MediumGameViewController: UIViewController {
     @IBOutlet weak var sendLabel: UIButton!
     
     @IBOutlet weak var youLostLabel: UILabel!
+    
+    @IBOutlet weak var howToPlayLabel: UIButton!
+    
     
     func selection(_ row:Int , col:Int) -> [[Int]]{
         for i in 0...row{
@@ -58,34 +63,41 @@ class MediumGameViewController: UIViewController {
     
     
     @IBAction func chocolateButton(_ sender: AnyObject) {
-        let row = GameModel(model: "Medium").selectByTag[Int(sender.tag)]![0]
-        let col = GameModel(model: "Medium").selectByTag[Int(sender.tag)]![1]
-        gameBoard.matrix = selection(row, col: col)
-        for i in 0...ROWS-1{
-            for j in 0...COLS-1{
-                if(gameBoard.matrix[i][j] == 0){
-                    let button = view.viewWithTag(originalGameBoard.matrix[i][j]) as! UIButton
-                    button.setImage(nil, for: UIControlState())
-                    button.isUserInteractionEnabled = false
-                    
-                }else{
-                    let button = view.viewWithTag(originalGameBoard.matrix[i][j]) as! UIButton
-                    button.isUserInteractionEnabled = false
-                    
+        let b = (onChocolateTap?())
+        if(sender.tag == 36 && b!){
+            let alert = UIAlertController(title: "Ooops!", message: "Force the other player to eat the green mint chocolate. Choose a different chocolate.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ready", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }else{
+            let row = GameModel(model: "Medium").selectByTag[Int(sender.tag)]![0]
+            let col = GameModel(model: "Medium").selectByTag[Int(sender.tag)]![1]
+            gameBoard.matrix = selection(row, col: col)
+            for i in 0...ROWS-1{
+                for j in 0...COLS-1{
+                    if(gameBoard.matrix[i][j] == 0){
+                        let button = view.viewWithTag(originalGameBoard.matrix[i][j]) as! UIButton
+                        button.setImage(nil, for: UIControlState())
+                        button.isUserInteractionEnabled = false
+                    }else{
+                        let button = view.viewWithTag(originalGameBoard.matrix[i][j]) as! UIButton
+                        button.isUserInteractionEnabled = false
+                    }
                 }
             }
+            sendLabel.isHidden = false
         }
-        //Losing Position
-        if(gameBoard.matrix[ROWS-1][0] == 0){
-            youLostLabel.isHidden = false
-        }
-        sendLabel.isHidden = false
     }
     
     
     @IBAction func sendButton(_ sender: AnyObject) {
         youLostLabel.text = "You Won!"
         onSendTap?()
+        
+    }
+    
+    
+    @IBAction func howToPlay(_ sender: Any) {
+        onHowToPlayTap?()
         
     }
     

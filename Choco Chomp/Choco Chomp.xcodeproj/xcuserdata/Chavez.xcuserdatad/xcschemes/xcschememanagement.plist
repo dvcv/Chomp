@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Choco Chomp Main App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Choco Chomp Main.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>MessagesExtension.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +23,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1A3E529C1E677D0100BA3C2D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1AA873EA1E6A8D8E00BBAD48</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1AA874001E6A907D00BBAD48</key>
 		<dict>
 			<key>primary</key>
 			<true/>

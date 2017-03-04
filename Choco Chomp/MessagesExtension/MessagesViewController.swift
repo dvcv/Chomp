@@ -17,19 +17,21 @@ class MessagesViewController: MSMessagesAppViewController {
     var caption = "Want to play Chomp?"
     var session: MSSession?
     
-    
+    fileprivate func isSenderSameAsRecipient(_ conversation: MSConversation) -> Bool{
+        if(conversation.selectedMessage?.senderParticipantIdentifier == nil){
+            return false
+        }else{
+            return conversation.localParticipantIdentifier == conversation.selectedMessage?.senderParticipantIdentifier
+        }
+    }
+
     
     override func willBecomeActive(with conversation: MSConversation) {
         if let messageURL = conversation.selectedMessage?.url {
             self.decodeURL(messageURL)
             let player = "$\(conversation.localParticipantIdentifier)"
-            let player2 = "$\(activeConversation?.selectedMessage?.senderParticipantIdentifier)"
-            print(player + " " + player2)
-            caption = player + " chomped the chocolate, it's your move!"
-            session = conversation.selectedMessage?.session
-            if(self.isSenderSameAsRecipient()){
-                print("Same")
-            }
+            caption = player + " chomped the chocolate!"
+            self.session = conversation.selectedMessage?.session
         }
         
         configureChildViewController(for: presentationStyle, with: conversation)
@@ -37,6 +39,7 @@ class MessagesViewController: MSMessagesAppViewController {
     }
     
     override func willTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
+        
         guard let conversation = self.activeConversation else { return }
         configureChildViewController(for: presentationStyle, with: conversation)
         
@@ -84,16 +87,30 @@ extension MessagesViewController {
         }
         
         
-        if(isSenderSameAsRecipient()){
-            for i in 0...controller.ROWS - 1{
-                for j in 0...controller.COLS - 1{
-                    let button = controller.view.viewWithTag(controller.originalGameBoard.matrix[i][j]) as! UIButton
-                    button.isUserInteractionEnabled = false
-                    
-                }
+        
+        //Checks to see if the sender is the same as the receiver.
+        //If true alert pops out
+        if(isSenderSameAsRecipient(conversation)){
+            var message = "Please wait for the other player to chomp the chocolate."
+            //Losing Position
+            if(gameBoard.matrix[controller.ROWS-1][0] == 0){
+                message = "Game Over"
             }
+            
+            let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
+            self.present(alert, animated: true, completion: nil)
         }
         
+        //checks to see if there are still moves available
+        controller.onChocolateTap = {
+            let b = (self.gameBoard.matrix[controller.ROWS-2][0] != 0 || self.gameBoard.matrix[controller.ROWS-1][1] != 0)
+            
+            return b
+        }
+        
+        
+        
+        //displays current game board
         for i in 0...controller.ROWS - 1{
             for j in 0...controller.COLS - 1{
                 
@@ -105,13 +122,43 @@ extension MessagesViewController {
                     
                 }
             }
+            //Losing Position
+            if(gameBoard.matrix[controller.ROWS-1][0] == 0){
+                let message = "Game Over"
+                let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                self.present(alert, animated: true, completion: nil)
+            }
+            
         }
         
+        
+        //On button tap, an alert pops out showing the player how to play.
+        controller.onHowToPlayTap = {
+            let alert = UIAlertController(title: "How To Play", message: "Tap on a chocolate square to eat all chocolates above and to the right. Force the other player to eat the green mint chocolate.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ready", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
+        
+        //When player is ready to send move this is called
         controller.onSendTap = {
             controller.sendLabel.isHidden = true
+            controller.howToPlayLabel.isHidden = true
             let url = controller.prepareURL()
             let image = UIImage.snapshot(from: controller.view)
-            self.insertMessageWith(caption: self.caption, session: self.session, url, image)
+            
+            var session = self.session
+            if session == nil {
+                self.session = MSSession()
+                session = self.session
+            }
+            //Checks for Losing Position
+            if(controller.gameBoard.matrix[controller.ROWS-1][0] == 0){
+                let player = "$\(conversation.localParticipantIdentifier)"
+                self.caption = player + " ate the poison!"
+            }
+            self.insertMessageWith(caption: self.caption, session: session, url, image)
             self.dismiss()
         }
         
@@ -137,11 +184,6 @@ extension MessagesViewController {
                            session: MSSession?,
                            _ url: URL,
                            _ image: UIImage) {
-        var session = session
-        if session == nil {
-            self.session = MSSession()
-            session = self.session
-        }
         
         let message = MSMessage(session: session!)
         let template = MSMessageTemplateLayout()
@@ -180,12 +222,4 @@ extension MessagesViewController {
     }
 }
 
-extension MessagesViewController {
-    fileprivate func isSenderSameAsRecipient() -> Bool{
-
-        guard let conversation = activeConversation else { return false }
-        guard let message = conversation.selectedMessage else { return false }
-        return message.senderParticipantIdentifier == conversation.localParticipantIdentifier
-    }
-}
 
