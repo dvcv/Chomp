@@ -20,6 +20,8 @@ class MediumGameViewController: UIViewController {
     var gameBoard = GameModel(model: "Medium")
     let ROWS = GameModel(model: "Medium").matrix.count
     let COLS = GameModel(model: "Medium").matrix[0].count
+    var oneMove: Int = 0
+
     
     @IBOutlet weak var sendLabel: UIButton!
     
@@ -64,11 +66,14 @@ class MediumGameViewController: UIViewController {
     
     
     @IBAction func chocolateButton(_ sender: AnyObject) {
+        if(oneMove == 0){
         let b = (onChocolateTap?())
         if(sender.tag == 36 && b!){
             let alert = UIAlertController(title: "Ooops!", message: "Force the other player to eat the green mint chocolate. Choose a different chocolate.", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ready", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+            oneMove = 0
+            return
         }else{
             let row = GameModel(model: "Medium").selectByTag[Int(sender.tag)]![0]
             let col = GameModel(model: "Medium").selectByTag[Int(sender.tag)]![1]
@@ -89,6 +94,8 @@ class MediumGameViewController: UIViewController {
             if(sender.tag == 36){
                 emojiLabel.isHidden = false
             }
+        }
+            oneMove = 1
         }
     }
     

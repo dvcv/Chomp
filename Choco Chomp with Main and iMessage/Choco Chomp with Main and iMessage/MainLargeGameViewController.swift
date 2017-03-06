@@ -42,9 +42,40 @@ class MainLargeGameViewController: UIViewController {
     
     
 
-    @IBAction func buttonTap(_ sender: AnyObject) {
-        print(ROWS)
-        print(COLS)
+    @IBAction func chocolateButton(_ sender: AnyObject) {
+        
+        let b = (gameBoard.matrix[ROWS-2][0] != 0 || gameBoard.matrix[ROWS-1][1] != 0)
+        
+        if(sender.tag == 71 && b){
+            let alert = UIAlertController(title: "Ooops!", message: "Force the other player to eat the green mint chocolate. Choose a different chocolate.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ready", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }else{
+            let row = GameModel(model: "Large").selectByTag[Int(sender.tag)]![0]
+            let col = GameModel(model: "Large").selectByTag[Int(sender.tag)]![1]
+            gameBoard.matrix = selection(row, col: col)
+            for i in 0...ROWS-1{
+                for j in 0...COLS-1{
+                    if(gameBoard.matrix[i][j] == 0){
+                        let button = view.viewWithTag(originalGameBoard.matrix[i][j]) as! UIButton
+                        button.setImage(nil, for: UIControlState())
+                        button.isUserInteractionEnabled = false
+                    }
+                }
+            }
+            
+            if(sender.tag == 71){
+                emojiLabel.isHidden = false
+                playAgainButton.isHidden = false
+                loserLabel.isHidden = false
+                nextPlayer.isHidden = true
+                nextLabel.isHidden = true
+                loserLabel.text = "\(nextPlayer.text == players[0] ? players[0] : players[1]) ate the poison!"
+            }
+            //change next player
+            nextPlayer.text = nextPlayer.text == players[0] ? players[1] : players[0]
+        }
+        
         
     }
     
