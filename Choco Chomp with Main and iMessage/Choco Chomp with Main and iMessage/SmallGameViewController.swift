@@ -26,6 +26,7 @@ class MainSmallGameViewController: UIViewController {
     
     @IBOutlet weak var loserLabel: UILabel!
     
+    @IBOutlet weak var foilBackground: UIImageView!
     
     
     
@@ -65,6 +66,7 @@ class MainSmallGameViewController: UIViewController {
             
             if(sender.tag == 16){
                 emojiLabel.isHidden = false
+                foilBackground.isHidden = true
                 playAgainButton.isHidden = false
                 loserLabel.isHidden = false
                 nextPlayer.isHidden = true
@@ -99,6 +101,7 @@ class MainSmallGameViewController: UIViewController {
         loserLabel.isHidden = true
         playAgainButton.isHidden = true
         emojiLabel.isHidden = true
+        foilBackground.isHidden = false
         nextPlayer.isHidden = false
         nextLabel.isHidden = false
     }

@@ -48,7 +48,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0C-SJ-Jra">
                                 <rect key="frame" x="15" y="193" width="344" height="248"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start Game" image="playGame"/>
+                                <state key="normal" image="playGame"/>
                                 <connections>
                                     <action selector="startGame:" destination="r89-Rx-njp" eventType="touchUpInside" id="D0O-cz-hg1"/>
                                 </connections>
@@ -463,7 +463,7 @@
     </scenes>
     <resources>
         <image name="chocolate" width="770" height="756"/>
-        <image name="foil" width="1300" height="864"/>
+        <image name="foil" width="5000" height="3750"/>
         <image name="greenChocolate" width="770" height="756"/>
         <image name="playGame" width="672" height="336"/>
     </resources>

@@ -27,6 +27,7 @@ class MainLargeGameViewController: UIViewController {
     @IBOutlet weak var loserLabel: UILabel!
     
     
+    @IBOutlet weak var foilBackground: UIImageView!
     
     
     var players = [String]()
@@ -66,6 +67,7 @@ class MainLargeGameViewController: UIViewController {
             
             if(sender.tag == 71){
                 emojiLabel.isHidden = false
+                foilBackground.isHidden = true
                 playAgainButton.isHidden = false
                 loserLabel.isHidden = false
                 nextPlayer.isHidden = true
@@ -101,6 +103,7 @@ class MainLargeGameViewController: UIViewController {
         loserLabel.isHidden = true
         playAgainButton.isHidden = true
         emojiLabel.isHidden = true
+        foilBackground.isHidden = false
         nextPlayer.isHidden = false
         nextLabel.isHidden = false
     }
