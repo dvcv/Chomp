@@ -173,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CO1-zj-3gQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="720.79999999999995" y="34.632683658170919"/>
+            <point key="canvasLocation" x="720.703125" y="34.260614934114201"/>
         </scene>
         <!--Main Medium Game View Controller-->
         <scene sceneID="lgx-Ds-Yn5">
@@ -191,7 +191,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="1379.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="😛🍫🤢☠️" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="150" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hs-QJ-78R">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="😛🍫🤢☠️" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hs-QJ-78R">
                                 <rect key="frame" x="172" y="166" width="710" height="823"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="300"/>
@@ -627,155 +627,170 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="1379.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="😛🍫🤢☠️" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="150" translatesAutoresizingMaskIntoConstraints="NO" id="r1f-72-sZg">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="😛🍫🤢☠️" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="r1f-72-sZg">
                                 <rect key="frame" x="172" y="200" width="710" height="720"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="300"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSq-0d-hbS">
-                                <rect key="frame" x="308.5" y="246" width="135" height="102"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekh-7x-LNX">
+                                <rect key="frame" x="304" y="253" width="135" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="eja-KJ-O7A"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="gVc-NN-GMI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8C-O6-9Pw">
-                                <rect key="frame" x="442.5" y="246" width="136.5" height="102"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhu-NH-UHh">
+                                <rect key="frame" x="438" y="253" width="136.5" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="IsT-aX-IJS"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="cs8-j1-1cd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1JN-0K-mdV">
-                                <rect key="frame" x="579" y="246" width="138" height="102"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yi4-rW-1Zl">
+                                <rect key="frame" x="573" y="253" width="138" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="M1b-eT-LT4"/>
+                                    <action selector="chocolateButton:" destination="tWA-zD-Xih" eventType="touchUpInside" id="eHX-QG-zWi"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="wXm-hX-Ofy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9DL-qC-zZa">
-                                <rect key="frame" x="309.5" y="348" width="135" height="102.5"/>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0p-VH-2oQ">
+                                <rect key="frame" x="304" y="355" width="135" height="102.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="Zzt-ue-DV6"/>
+                                    <action selector="chocolateButton:" destination="tWA-zD-Xih" eventType="touchUpInside" id="dkj-Mc-wU3"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="l9c-2X-gFd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PxR-g7-Uie">
-                                <rect key="frame" x="444.5" y="348" width="136.5" height="102.5"/>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSN-RF-2Ci">
+                                <rect key="frame" x="438" y="355" width="136.5" height="102.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="JVU-Hd-yPl"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="45q-go-6pc"/>
+                                    <action selector="chocolateButton:" destination="tWA-zD-Xih" eventType="touchUpInside" id="JzO-yw-hGm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yf2-x9-1v6">
-                                <rect key="frame" x="580" y="348" width="135" height="102.5"/>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTd-hi-vbE">
+                                <rect key="frame" x="573" y="355" width="138" height="102.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="YnW-14-F7T"/>
+                                    <action selector="chocolateButton:" destination="tWA-zD-Xih" eventType="touchUpInside" id="TeQ-Pb-aIu"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="UYb-my-bgt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTL-lH-qs6">
-                                <rect key="frame" x="307" y="450.5" width="136.5" height="102.5"/>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RH-KY-wbf">
+                                <rect key="frame" x="304" y="457" width="135" height="103.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="RwH-Bb-LT5"/>
+                                    <action selector="chocolateButton:" destination="tWA-zD-Xih" eventType="touchUpInside" id="g5e-Wi-Msi"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="sZ8-tn-eIp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4m-8L-MNR">
-                                <rect key="frame" x="442.5" y="450.5" width="138" height="102.5"/>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYR-BK-Tbl">
+                                <rect key="frame" x="438" y="457" width="136.5" height="103.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="7S7-6F-FfJ"/>
+                                    <action selector="chocolateButton:" destination="tWA-zD-Xih" eventType="touchUpInside" id="QB7-Tv-1pj"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="s8O-ef-yp4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3I1-IT-OQk">
-                                <rect key="frame" x="580" y="450.5" width="135" height="102.5"/>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRq-sP-xGS">
+                                <rect key="frame" x="573" y="457" width="138" height="103.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="Akg-DN-F9D"/>
+                                    <action selector="chocolateButton:" destination="tWA-zD-Xih" eventType="touchUpInside" id="ZVc-Ki-Dcw"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="dqe-ur-0fV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7h-r8-J8G">
-                                <rect key="frame" x="308" y="551" width="136.5" height="102.5"/>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z63-bZ-1wG">
+                                <rect key="frame" x="304" y="560" width="135" height="102.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="ka7-hY-xJZ"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="Ql8-4z-DnW"/>
+                                    <action selector="chocolateButton:" destination="tWA-zD-Xih" eventType="touchUpInside" id="n7p-MH-ukw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRZ-eb-y7C">
-                                <rect key="frame" x="444.5" y="551" width="135" height="102.5"/>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyx-Vb-wdV">
+                                <rect key="frame" x="438" y="560" width="136.5" height="102.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="5aJ-9r-Abv"/>
+                                    <action selector="chocolateButton:" destination="tWA-zD-Xih" eventType="touchUpInside" id="Odk-s4-hYI"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="oMy-zP-Ymp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5C3-2j-Sef">
-                                <rect key="frame" x="578" y="551" width="136.5" height="102.5"/>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXl-4d-80j">
+                                <rect key="frame" x="573" y="560" width="138" height="102.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="fYa-KY-jV9"/>
+                                    <action selector="chocolateButton:" destination="tWA-zD-Xih" eventType="touchUpInside" id="uNR-XJ-hsV"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="xPe-94-J6Q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fy4-94-U2O">
-                                <rect key="frame" x="306" y="653.5" width="137.5" height="102"/>
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gum-bg-jOx">
+                                <rect key="frame" x="304" y="662" width="135" height="102.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="726-32-A7w"/>
+                                    <action selector="chocolateButton:" destination="tWA-zD-Xih" eventType="touchUpInside" id="H6v-TY-qbh"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="uTR-Ci-iaf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f29-Y1-wfL">
-                                <rect key="frame" x="442.5" y="653.5" width="135" height="102"/>
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfF-6c-OdK">
+                                <rect key="frame" x="438" y="662" width="136.5" height="102.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="W81-Bh-zes"/>
+                                    <action selector="chocolateButton:" destination="tWA-zD-Xih" eventType="touchUpInside" id="bOB-Gf-MZI"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="eMQ-Se-e9o"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMc-Ir-g5s">
-                                <rect key="frame" x="576" y="653.5" width="136.5" height="102"/>
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1w-sr-tIq">
+                                <rect key="frame" x="573" y="662" width="138" height="102.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="RDy-sZ-wM0"/>
+                                    <action selector="chocolateButton:" destination="tWA-zD-Xih" eventType="touchUpInside" id="lCW-Rg-ELg"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="xHE-Uk-y4n"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8q-Ut-2GB">
-                                <rect key="frame" x="306" y="755.5" width="135" height="102.5"/>
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vV4-69-0pb">
+                                <rect key="frame" x="304" y="765" width="135" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="greenChocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="BJT-5O-6FP"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="ixK-Mo-lQE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPK-9q-t5J">
-                                <rect key="frame" x="439.5" y="755.5" width="136.5" height="102.5"/>
+                            <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Wr-0I-0Ii">
+                                <rect key="frame" x="438" y="765" width="136.5" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="vde-Zv-tTp"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="Hg9-CS-LxR"/>
+                                    <action selector="chocolateButton:" destination="tWA-zD-Xih" eventType="touchUpInside" id="zYp-8p-p65"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoZ-Ob-1eO">
-                                <rect key="frame" x="576" y="755.5" width="138" height="102.5"/>
+                            <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yB7-3b-wTo">
+                                <rect key="frame" x="573" y="765" width="138" height="102"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="chocolate"/>
                                 <connections>
-                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="b9d-7r-GCV"/>
+                                    <action selector="chocolateButton:" destination="CTo-BK-Orn" eventType="touchUpInside" id="kBS-46-5et"/>
+                                    <action selector="chocolateButton:" destination="tWA-zD-Xih" eventType="touchUpInside" id="nhT-og-0B6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choco Chomp" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="19" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="boT-n9-KV3">
@@ -855,8 +870,20 @@
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdy-QK-dGS" customClass="GADBannerView">
+                                <rect key="frame" x="352" y="1316" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="B1o-1e-Rjc"/>
+                                    <constraint firstAttribute="height" constant="50" id="ikL-ce-fOU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="kdy-QK-dGS" firstAttribute="centerX" secondItem="OUo-rj-iBI" secondAttribute="centerX" id="fLq-Bv-Sgi"/>
+                            <constraint firstItem="xC3-TI-AEC" firstAttribute="top" secondItem="kdy-QK-dGS" secondAttribute="bottom" id="zuq-lK-TXK"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="emojiLabel" destination="r1f-72-sZg" id="dj8-rK-dzT"/>
@@ -1503,7 +1530,7 @@
                                     <action selector="chocolateButton:" destination="Ig9-XC-5Gx" eventType="touchUpInside" id="k9Q-rE-Aua"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="😛🍫🤢☠️" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="75" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qvb-9c-p4O">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="😛🍫🤢☠️" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qvb-9c-p4O">
                                 <rect key="frame" x="172" y="166" width="710" height="823"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="300"/>
@@ -1614,7 +1641,7 @@
         <image name="playGame" width="672" height="336"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LeB-84-OWu"/>
-        <segue reference="7Ot-bM-aeR"/>
+        <segue reference="lzs-CO-8E4"/>
+        <segue reference="eab-gb-W4u"/>
     </inferredMetricsTieBreakers>
 </document>

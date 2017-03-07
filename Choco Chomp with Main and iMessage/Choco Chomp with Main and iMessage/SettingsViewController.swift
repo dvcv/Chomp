@@ -27,8 +27,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var largeGameButton: UIButton!
     
     var boardSize: Int = 0
-    
-    
+
     
     @IBAction func playerOneInputAction(_ sender: AnyObject) {
         
@@ -107,8 +106,8 @@ class SettingsViewController: UIViewController {
             let DestViewController: MainLargeGameViewController = segue.destination as! MainLargeGameViewController
             DestViewController.players.append(playerOneInput.text!)
             DestViewController.players.append(playerTwoInput.text!)
-        default:
-            print("Error")
+        default: break
+            
         }
     }
     

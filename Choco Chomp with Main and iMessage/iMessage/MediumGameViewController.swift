@@ -69,7 +69,7 @@ class MediumGameViewController: UIViewController {
         if(oneMove == 0){
         let b = (onChocolateTap?())
         if(sender.tag == 36 && b!){
-            let alert = UIAlertController(title: "Ooops!", message: "Force the other player to eat the green mint chocolate. Choose a different chocolate.", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Ooops!", message: "Force the other player to eat the green poison chocolate. Choose a different chocolate.", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ready", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             oneMove = 0

@@ -48,7 +48,7 @@ class MainMediumGameViewController: UIViewController {
         let b = (gameBoard.matrix[ROWS-2][0] != 0 || gameBoard.matrix[ROWS-1][1] != 0)
         
         if(sender.tag == 36 && b){
-            let alert = UIAlertController(title: "Ooops!", message: "Force the other player to eat the green mint chocolate. Choose a different chocolate.", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Ooops!", message: "Force the other player to eat the green poison chocolate. Choose a different chocolate.", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Ready", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }else{
@@ -109,8 +109,8 @@ class MainMediumGameViewController: UIViewController {
     
     
     @IBAction func howToPlayButton(_ sender: Any) {
-        let alert = UIAlertController(title: "How To Play", message: "Tap on a chocolate square to eat all chocolates above and to the right. Force the other player to eat the green mint chocolate.", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ready", style: UIAlertActionStyle.default, handler: nil))
+        let alert = UIAlertController(title: "How To Play", message: "Tap on a chocolate square to eat all chocolates above and to the right. Force the other player to eat the green poison chocolate.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
