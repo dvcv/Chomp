@@ -91,6 +91,17 @@ class SettingsViewController: UIViewController {
         
     }
     
+    @IBAction func disableSelection(_ sender: AnyObject) {
+        if(chooseGameBoardLabel.isHidden == true){
+            
+        }else{
+            smallGameButton.isHidden = true
+            mediumGameButton.isHidden = true
+            largeGameButton.isHidden = true
+            chooseGameBoardLabel.isHidden = true
+        }
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch boardSize {
