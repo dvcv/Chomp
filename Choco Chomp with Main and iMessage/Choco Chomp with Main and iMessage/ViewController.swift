@@ -9,9 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var noise = Noises()
 
+    @IBAction func playButton(_ sender: Any) {
+        noise.playCrunchNoise()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        //setup noise
+        noise.setUp()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

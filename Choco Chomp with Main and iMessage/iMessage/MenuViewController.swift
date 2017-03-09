@@ -14,12 +14,17 @@ class MenuViewController: UIViewController {
     
     var gameSize: String = "Small"
     
+    
     @IBOutlet weak var playGameLabel: UIButton!
     
     @IBAction func startGame(_ sender: AnyObject) {
         onButtonTap?()
         playGameLabel.isHidden = true
+        
+        //play crunch
     }
     
+    override func viewDidLoad() {
+    }
     
 }

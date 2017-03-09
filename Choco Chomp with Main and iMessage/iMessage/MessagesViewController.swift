@@ -16,6 +16,8 @@ class MessagesViewController: MSMessagesAppViewController {
     var gameActive: String = "Medium"
     var caption = "Want to play Chomp?"
     var session: MSSession?
+    //noises
+    var noise = Noises()
     
     fileprivate func isSenderSameAsRecipient(_ conversation: MSConversation) -> Bool{
         if(conversation.selectedMessage?.senderParticipantIdentifier == nil){
@@ -25,6 +27,10 @@ class MessagesViewController: MSMessagesAppViewController {
         }
     }
     
+    override func viewDidLoad() {
+        //setting up noise
+        noise.setUp()
+    }
     
     override func willBecomeActive(with conversation: MSConversation) {
         if let messageURL = conversation.selectedMessage?.url {
@@ -174,6 +180,8 @@ extension MessagesViewController {
         controller.onButtonTap = {
             [unowned self] in
             self.requestPresentationStyle(.expanded)
+            //play crunch noise
+            self.noise.playCrunchNoise()
             
         }
         return controller

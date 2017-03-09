@@ -21,7 +21,12 @@ class MediumGameViewController: UIViewController {
     let ROWS = GameModel(model: "Medium").matrix.count
     let COLS = GameModel(model: "Medium").matrix[0].count
     var oneMove: Int = 0
+    
+    //Noise
+    var noise = Noises()
 
+    //Background
+    @IBOutlet weak var foil: UIImageView!
     
     @IBOutlet weak var sendLabel: UIButton!
     
@@ -75,6 +80,8 @@ class MediumGameViewController: UIViewController {
             oneMove = 0
             return
         }else{
+            //Crunch Noise
+            noise.playCrunchNoise()
             let row = GameModel(model: "Medium").selectByTag[Int(sender.tag)]![0]
             let col = GameModel(model: "Medium").selectByTag[Int(sender.tag)]![1]
             gameBoard.matrix = selection(row, col: col)
@@ -92,7 +99,10 @@ class MediumGameViewController: UIViewController {
             }
             sendLabel.isHidden = false
             if(sender.tag == 36){
+                //Play Losing Noise
+                noise.playLosingNoise()
                 emojiLabel.isHidden = false
+                foil.isHidden = true
             }
         }
             oneMove = 1
@@ -115,6 +125,8 @@ class MediumGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //setup noise
+        noise.setUp()
         
     }
     

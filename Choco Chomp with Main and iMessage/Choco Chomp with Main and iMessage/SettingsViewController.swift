@@ -27,6 +27,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var largeGameButton: UIButton!
     
     var boardSize: Int = 0
+    
+    //Noise
+    var noise = Noises()
 
     
     @IBAction func playerOneInputAction(_ sender: AnyObject) {
@@ -60,7 +63,27 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Setup noise
+        noise.setUp()
+        
         // Do any additional setup after loading the view, typically from a nib.
+        if let player1name = UserDefaults.standard.object(forKey: "PlayerOne") as? String, let player2name = UserDefaults.standard.object(forKey: "PlayerTwo") as? String{
+            
+            if(player1name == "" &&  player2name == ""){
+                chooseGameBoardLabel.isHidden = true
+                smallGameButton.isHidden = true
+                mediumGameButton.isHidden = true
+                largeGameButton.isHidden = true
+            }
+            
+        }else if(playerOneInput.text == "" && playerTwoInput.text == ""){
+            chooseGameBoardLabel.isHidden = true
+            smallGameButton.isHidden = true
+            mediumGameButton.isHidden = true
+            largeGameButton.isHidden = true
+        }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,8 +95,8 @@ class SettingsViewController: UIViewController {
         if let player1name = UserDefaults.standard.object(forKey: "PlayerOne") as? String{
             playerOneInput.text = player1name
         }
-        if let player1name = UserDefaults.standard.object(forKey: "PlayerTwo") as? String{
-            playerTwoInput.text = player1name
+        if let player2name = UserDefaults.standard.object(forKey: "PlayerTwo") as? String{
+            playerTwoInput.text = player2name
         }
         if(playerOneInput.text == "" || playerTwoInput.text == ""){
             chooseGameBoardLabel.isHidden = true
@@ -104,6 +127,9 @@ class SettingsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //cruch noise
+        noise.playCrunchNoise()
+        
         switch boardSize {
         case 1:
             let DestViewController: MainSmallGameViewController = segue.destination as! MainSmallGameViewController

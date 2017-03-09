@@ -6,6 +6,7 @@
 //  Copyright © 2017 David Chavez. All rights reserved.
 //
 import UIKit
+import GoogleMobileAds
 
 class MainLargeGameViewController: UIViewController {
     
@@ -28,6 +29,12 @@ class MainLargeGameViewController: UIViewController {
     
     
     @IBOutlet weak var foilBackground: UIImageView!
+    
+    //Banner View
+    @IBOutlet weak var bannerView: GADBannerView!
+    
+    //Noise
+    var noise = Noises()
     
     
     var players = [String]()
@@ -52,6 +59,9 @@ class MainLargeGameViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Ready", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }else{
+            //Crunch
+            noise.playCrunchNoise()
+            
             let row = GameModel(model: "Large").selectByTag[Int(sender.tag)]![0]
             let col = GameModel(model: "Large").selectByTag[Int(sender.tag)]![1]
             gameBoard.matrix = selection(row, col: col)
@@ -66,6 +76,9 @@ class MainLargeGameViewController: UIViewController {
             }
             
             if(sender.tag == 71){
+                //Losing Noise
+                noise.playLosingNoise()
+                
                 emojiLabel.isHidden = false
                 foilBackground.isHidden = true
                 playAgainButton.isHidden = false
@@ -117,6 +130,18 @@ class MainLargeGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Noise setup
+        noise.setUp()
+        
+        //Banner View
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        
+        bannerView.adUnitID = "ca-app-pub-2467079541328028/5716947197"
+        bannerView.rootViewController = self
+        bannerView.load(request)
+        
+
         // Do any additional setup after loading the view, typically from a nib.
         if let player1name = UserDefaults.standard.object(forKey: "PlayerOne") as? String{
             nextPlayer.text = player1name

@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Choco Chomp with Main and iMessage' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Choco Chomp with Main and iMessage
+	pod 'Firebase/Core'
+	pod ‘Firebase/AdMob’
+end
+
+target 'iMessage' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for iMessage
+	pod 'Firebase/Core'
+	pod ‘Firebase/AdMob’
+
+end

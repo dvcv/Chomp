@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>744503919155-je712tt9uhl7aa2mkrmi9rjocngfo9vl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.744503919155-je712tt9uhl7aa2mkrmi9rjocngfo9vl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA25KyB9LUCjb3Y3x0BXBf1v3d_kl2nXYE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>744503919155</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.davidchavez.Choco-Chomp-with-Main-and-iMessage</string>
+	<key>PROJECT_ID</key>
+	<string>choco-chomp-7b355</string>
+	<key>STORAGE_BUCKET</key>
+	<string>choco-chomp-7b355.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:744503919155:ios:70cccf7bbf16c9a3</string>
+	<key>DATABASE_URL</key>
+	<string>https://choco-chomp-7b355.firebaseio.com</string>
+</dict>
+</plist>

@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A55CFB71E70AF7A00129050 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A55CFB61E70AF7A00129050 /* GoogleService-Info.plist */; };
+		1A55CFB91E70C2BC00129050 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A55CFB81E70C2BC00129050 /* GoogleService-Info.plist */; };
 		1A74DA011E6B8350009612E0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A74DA001E6B8350009612E0 /* SettingsViewController.swift */; };
 		1A74DA031E6BB09C009612E0 /* MainGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A74DA021E6BB09C009612E0 /* MainGameModel.swift */; };
 		1A74DA051E6C19CC009612E0 /* MainLargeGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A74DA041E6C19CC009612E0 /* MainLargeGameViewController.swift */; };
+		1AA23E921E70DBE000ABDE3E /* crunch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1AA23E901E70DBE000ABDE3E /* crunch.wav */; };
+		1AA23E931E70DBE000ABDE3E /* loser.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1AA23E911E70DBE000ABDE3E /* loser.wav */; };
+		1AA23E951E70DC3700ABDE3E /* Noises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA23E941E70DC3700ABDE3E /* Noises.swift */; };
+		1AA23E971E70EE2200ABDE3E /* iMessageNoises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA23E961E70EE2200ABDE3E /* iMessageNoises.swift */; };
+		1AA23E9B1E70F01100ABDE3E /* crunch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1AA23E991E70F01100ABDE3E /* crunch.wav */; };
+		1AA23E9C1E70F01100ABDE3E /* loser.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1AA23E9A1E70F01100ABDE3E /* loser.wav */; };
+		1AA23E9E1E70F3E400ABDE3E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA23E9D1E70F3E400ABDE3E /* MainInterface.storyboard */; };
 		1AA8745B1E6AC95200BBAD48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8745A1E6AC95200BBAD48 /* AppDelegate.swift */; };
 		1AA8745D1E6AC95200BBAD48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8745C1E6AC95200BBAD48 /* ViewController.swift */; };
 		1AA874601E6AC95200BBAD48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA8745E1E6AC95200BBAD48 /* Main.storyboard */; };
@@ -17,7 +26,6 @@
 		1AA874651E6AC95200BBAD48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA874631E6AC95200BBAD48 /* LaunchScreen.storyboard */; };
 		1AA874731E6AC97900BBAD48 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA874721E6AC97900BBAD48 /* Messages.framework */; };
 		1AA874761E6AC97900BBAD48 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA874751E6AC97900BBAD48 /* MessagesViewController.swift */; };
-		1AA874791E6AC97900BBAD48 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA874771E6AC97900BBAD48 /* MainInterface.storyboard */; };
 		1AA8747B1E6AC97900BBAD48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AA8747A1E6AC97900BBAD48 /* Assets.xcassets */; };
 		1AA8747F1E6AC97900BBAD48 /* iMessage.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1AA874701E6AC97900BBAD48 /* iMessage.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1AA874851E6ACA7200BBAD48 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA874841E6ACA7200BBAD48 /* Snapshot.swift */; };
@@ -26,6 +34,8 @@
 		1AA8748B1E6ACB0800BBAD48 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8748A1E6ACB0800BBAD48 /* MenuViewController.swift */; };
 		1AA8748D1E6ADBBB00BBAD48 /* MediumGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8748C1E6ADBBA00BBAD48 /* MediumGameViewController.swift */; };
 		1AA8748F1E6B748B00BBAD48 /* SmallGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA8748E1E6B748B00BBAD48 /* SmallGameViewController.swift */; };
+		361A33FFFF20C007B42B4531 /* Pods_iMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840F922CA1A68B17C648A005 /* Pods_iMessage.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		FB407C07314B1B68F52311E6 /* Pods_Choco_Chomp_with_Main_and_iMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04CBF8E2AD87275398EBC8E1 /* Pods_Choco_Chomp_with_Main_and_iMessage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +63,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04CBF8E2AD87275398EBC8E1 /* Pods_Choco_Chomp_with_Main_and_iMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Choco_Chomp_with_Main_and_iMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A55CFB61E70AF7A00129050 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1A55CFB81E70C2BC00129050 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1A74DA001E6B8350009612E0 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		1A74DA021E6BB09C009612E0 /* MainGameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainGameModel.swift; sourceTree = "<group>"; };
 		1A74DA041E6C19CC009612E0 /* MainLargeGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLargeGameViewController.swift; sourceTree = "<group>"; };
+		1AA23E901E70DBE000ABDE3E /* crunch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = crunch.wav; sourceTree = "<group>"; };
+		1AA23E911E70DBE000ABDE3E /* loser.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = loser.wav; sourceTree = "<group>"; };
+		1AA23E941E70DC3700ABDE3E /* Noises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Noises.swift; sourceTree = "<group>"; };
+		1AA23E961E70EE2200ABDE3E /* iMessageNoises.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iMessageNoises.swift; sourceTree = "<group>"; };
+		1AA23E991E70F01100ABDE3E /* crunch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = crunch.wav; sourceTree = "<group>"; };
+		1AA23E9A1E70F01100ABDE3E /* loser.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = loser.wav; sourceTree = "<group>"; };
+		1AA23E9D1E70F3E400ABDE3E /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		1AA874571E6AC95200BBAD48 /* Choco Chomp with Main and iMessage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Choco Chomp with Main and iMessage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA8745A1E6AC95200BBAD48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AA8745C1E6AC95200BBAD48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +86,6 @@
 		1AA874701E6AC97900BBAD48 /* iMessage.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iMessage.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA874721E6AC97900BBAD48 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		1AA874751E6AC97900BBAD48 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
-		1AA874781E6AC97900BBAD48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		1AA8747A1E6AC97900BBAD48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AA8747C1E6AC97900BBAD48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AA874841E6ACA7200BBAD48 /* Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
@@ -75,6 +94,11 @@
 		1AA8748A1E6ACB0800BBAD48 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1AA8748C1E6ADBBA00BBAD48 /* MediumGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumGameViewController.swift; sourceTree = "<group>"; };
 		1AA8748E1E6B748B00BBAD48 /* SmallGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallGameViewController.swift; sourceTree = "<group>"; };
+		5951976DD500FA91C6187BCE /* Pods-Choco Chomp with Main and iMessage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Choco Chomp with Main and iMessage.release.xcconfig"; path = "Pods/Target Support Files/Pods-Choco Chomp with Main and iMessage/Pods-Choco Chomp with Main and iMessage.release.xcconfig"; sourceTree = "<group>"; };
+		840F922CA1A68B17C648A005 /* Pods_iMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8698AFC1FE575FA0780C7453 /* Pods-iMessage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMessage.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMessage/Pods-iMessage.release.xcconfig"; sourceTree = "<group>"; };
+		B97568BCD0A595B5C5C536C5 /* Pods-Choco Chomp with Main and iMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Choco Chomp with Main and iMessage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Choco Chomp with Main and iMessage/Pods-Choco Chomp with Main and iMessage.debug.xcconfig"; sourceTree = "<group>"; };
+		D82367F3641F93C1F86220B3 /* Pods-iMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMessage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMessage/Pods-iMessage.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB407C07314B1B68F52311E6 /* Pods_Choco_Chomp_with_Main_and_iMessage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,12 +115,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AA874731E6AC97900BBAD48 /* Messages.framework in Frameworks */,
+				361A33FFFF20C007B42B4531 /* Pods_iMessage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AA23E8F1E70DB6900ABDE3E /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1AA23E901E70DBE000ABDE3E /* crunch.wav */,
+				1AA23E911E70DBE000ABDE3E /* loser.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		1AA23E981E70EFFF00ABDE3E /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1AA23E991E70F01100ABDE3E /* crunch.wav */,
+				1AA23E9A1E70F01100ABDE3E /* loser.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		1AA8744E1E6AC95200BBAD48 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +147,7 @@
 				1AA874741E6AC97900BBAD48 /* iMessage */,
 				1AA874711E6AC97900BBAD48 /* Frameworks */,
 				1AA874581E6AC95200BBAD48 /* Products */,
+				813A0FDF131D1D3F22CF2475 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,10 +170,13 @@
 				1AA8748C1E6ADBBA00BBAD48 /* MediumGameViewController.swift */,
 				1AA8748E1E6B748B00BBAD48 /* SmallGameViewController.swift */,
 				1A74DA001E6B8350009612E0 /* SettingsViewController.swift */,
+				1AA23E941E70DC3700ABDE3E /* Noises.swift */,
+				1AA23E8F1E70DB6900ABDE3E /* Sounds */,
 				1AA8745E1E6AC95200BBAD48 /* Main.storyboard */,
 				1AA874611E6AC95200BBAD48 /* Assets.xcassets */,
 				1AA874631E6AC95200BBAD48 /* LaunchScreen.storyboard */,
 				1AA874661E6AC95200BBAD48 /* Info.plist */,
+				1A55CFB61E70AF7A00129050 /* GoogleService-Info.plist */,
 			);
 			path = "Choco Chomp with Main and iMessage";
 			sourceTree = "<group>";
@@ -137,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				1AA874721E6AC97900BBAD48 /* Messages.framework */,
+				04CBF8E2AD87275398EBC8E1 /* Pods_Choco_Chomp_with_Main_and_iMessage.framework */,
+				840F922CA1A68B17C648A005 /* Pods_iMessage.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -146,14 +196,28 @@
 			children = (
 				1AA874751E6AC97900BBAD48 /* MessagesViewController.swift */,
 				1AA8748A1E6ACB0800BBAD48 /* MenuViewController.swift */,
+				1AA23E961E70EE2200ABDE3E /* iMessageNoises.swift */,
 				1AA874841E6ACA7200BBAD48 /* Snapshot.swift */,
 				1AA874861E6ACA9C00BBAD48 /* MediumGameViewController.swift */,
+				1AA23E9D1E70F3E400ABDE3E /* MainInterface.storyboard */,
+				1AA23E981E70EFFF00ABDE3E /* Sounds */,
 				1AA874881E6ACAC300BBAD48 /* GameModel.swift */,
-				1AA874771E6AC97900BBAD48 /* MainInterface.storyboard */,
 				1AA8747A1E6AC97900BBAD48 /* Assets.xcassets */,
+				1A55CFB81E70C2BC00129050 /* GoogleService-Info.plist */,
 				1AA8747C1E6AC97900BBAD48 /* Info.plist */,
 			);
 			path = iMessage;
+			sourceTree = "<group>";
+		};
+		813A0FDF131D1D3F22CF2475 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B97568BCD0A595B5C5C536C5 /* Pods-Choco Chomp with Main and iMessage.debug.xcconfig */,
+				5951976DD500FA91C6187BCE /* Pods-Choco Chomp with Main and iMessage.release.xcconfig */,
+				D82367F3641F93C1F86220B3 /* Pods-iMessage.debug.xcconfig */,
+				8698AFC1FE575FA0780C7453 /* Pods-iMessage.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,10 +227,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AA874691E6AC95200BBAD48 /* Build configuration list for PBXNativeTarget "Choco Chomp with Main and iMessage" */;
 			buildPhases = (
+				A0CC570CF9ED2437C9A8792E /* [CP] Check Pods Manifest.lock */,
 				1AA874531E6AC95200BBAD48 /* Sources */,
 				1AA874541E6AC95200BBAD48 /* Frameworks */,
 				1AA874551E6AC95200BBAD48 /* Resources */,
 				1AA874831E6AC97900BBAD48 /* Embed App Extensions */,
+				E189C3DEFCE942FFB860C94A /* [CP] Embed Pods Frameworks */,
+				463A29E5FCC76F2D9EA3C4E4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1AA874801E6AC97900BBAD48 /* Build configuration list for PBXNativeTarget "iMessage" */;
 			buildPhases = (
+				D899B42691D28190F77A8452 /* [CP] Check Pods Manifest.lock */,
 				1AA8746C1E6AC97900BBAD48 /* Sources */,
 				1AA8746D1E6AC97900BBAD48 /* Frameworks */,
 				1AA8746E1E6AC97900BBAD48 /* Resources */,
+				AD783E2716783D8116CAE2B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,7 +310,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA23E931E70DBE000ABDE3E /* loser.wav in Resources */,
+				1AA23E921E70DBE000ABDE3E /* crunch.wav in Resources */,
 				1AA874651E6AC95200BBAD48 /* LaunchScreen.storyboard in Resources */,
+				1A55CFB71E70AF7A00129050 /* GoogleService-Info.plist in Resources */,
 				1AA874621E6AC95200BBAD48 /* Assets.xcassets in Resources */,
 				1AA874601E6AC95200BBAD48 /* Main.storyboard in Resources */,
 			);
@@ -252,17 +324,99 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AA8747B1E6AC97900BBAD48 /* Assets.xcassets in Resources */,
-				1AA874791E6AC97900BBAD48 /* MainInterface.storyboard in Resources */,
+				1AA23E9E1E70F3E400ABDE3E /* MainInterface.storyboard in Resources */,
+				1AA23E9B1E70F01100ABDE3E /* crunch.wav in Resources */,
+				1A55CFB91E70C2BC00129050 /* GoogleService-Info.plist in Resources */,
+				1AA23E9C1E70F01100ABDE3E /* loser.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		463A29E5FCC76F2D9EA3C4E4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Choco Chomp with Main and iMessage/Pods-Choco Chomp with Main and iMessage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0CC570CF9ED2437C9A8792E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AD783E2716783D8116CAE2B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iMessage/Pods-iMessage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D899B42691D28190F77A8452 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E189C3DEFCE942FFB860C94A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Choco Chomp with Main and iMessage/Pods-Choco Chomp with Main and iMessage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1AA874531E6AC95200BBAD48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA23E951E70DC3700ABDE3E /* Noises.swift in Sources */,
 				1A74DA031E6BB09C009612E0 /* MainGameModel.swift in Sources */,
 				1AA8745D1E6AC95200BBAD48 /* ViewController.swift in Sources */,
 				1AA8748D1E6ADBBB00BBAD48 /* MediumGameViewController.swift in Sources */,
@@ -277,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA23E971E70EE2200ABDE3E /* iMessageNoises.swift in Sources */,
 				1AA874761E6AC97900BBAD48 /* MessagesViewController.swift in Sources */,
 				1AA874891E6ACAC300BBAD48 /* GameModel.swift in Sources */,
 				1AA874871E6ACA9C00BBAD48 /* MediumGameViewController.swift in Sources */,
@@ -312,14 +467,6 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		1AA874771E6AC97900BBAD48 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1AA874781E6AC97900BBAD48 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -347,6 +494,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -397,6 +545,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -418,6 +567,7 @@
 		};
 		1AA8746A1E6AC95200BBAD48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B97568BCD0A595B5C5C536C5 /* Pods-Choco Chomp with Main and iMessage.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -432,6 +582,7 @@
 		};
 		1AA8746B1E6AC95200BBAD48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5951976DD500FA91C6187BCE /* Pods-Choco Chomp with Main and iMessage.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -446,9 +597,11 @@
 		};
 		1AA874811E6AC97900BBAD48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D82367F3641F93C1F86220B3 /* Pods-iMessage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = 5M837UYS2G;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Choco\\ Chomp\\ with\\ Main\\ and\\ iMessage",
@@ -465,9 +618,11 @@
 		};
 		1AA874821E6AC97900BBAD48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8698AFC1FE575FA0780C7453 /* Pods-iMessage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
 				DEVELOPMENT_TEAM = 5M837UYS2G;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Choco\\ Chomp\\ with\\ Main\\ and\\ iMessage",

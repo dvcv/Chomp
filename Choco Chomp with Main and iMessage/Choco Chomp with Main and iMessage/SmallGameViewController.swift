@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class MainSmallGameViewController: UIViewController {
     
@@ -29,6 +30,11 @@ class MainSmallGameViewController: UIViewController {
     
     @IBOutlet weak var foilBackground: UIImageView!
     
+    //Banner View
+    @IBOutlet weak var bannerView: GADBannerView!
+    
+    //Noise
+    var noise = Noises()
     
     
     var players = [String]()
@@ -52,6 +58,10 @@ class MainSmallGameViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Ready", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }else{
+            //Crunch
+            noise.playCrunchNoise()
+            
+            
             let row = GameModel(model: "Small").selectByTag[Int(sender.tag)]![0]
             let col = GameModel(model: "Small").selectByTag[Int(sender.tag)]![1]
             gameBoard.matrix = selection(row, col: col)
@@ -66,6 +76,9 @@ class MainSmallGameViewController: UIViewController {
             }
             
             if(sender.tag == 16){
+                //Losing Noise
+                noise.playLosingNoise()
+                
                 emojiLabel.isHidden = false
                 foilBackground.isHidden = true
                 playAgainButton.isHidden = false
@@ -116,6 +129,19 @@ class MainSmallGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Banner View
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        
+        bannerView.adUnitID = "ca-app-pub-2467079541328028/5716947197"
+        bannerView.rootViewController = self
+        bannerView.load(request)
+        
+        //Noise
+        noise.setUp()
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         if let player1name = UserDefaults.standard.object(forKey: "PlayerOne") as? String{
             nextPlayer.text = player1name
@@ -132,11 +158,5 @@ class MainSmallGameViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
     }
-    
-    
-
-    
-    
-    
     
 }
