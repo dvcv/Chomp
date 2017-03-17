@@ -26,6 +26,8 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var largeGameButton: UIButton!
     
+    @IBOutlet weak var switchNames: UIButton!
+    
     var boardSize: Int = 0
     
     //Noise
@@ -56,6 +58,7 @@ class SettingsViewController: UIViewController {
             smallGameButton.isHidden = false
             mediumGameButton.isHidden = false
             largeGameButton.isHidden = false
+            switchNames.isHidden = false
         }
     }
     
@@ -74,6 +77,7 @@ class SettingsViewController: UIViewController {
                 smallGameButton.isHidden = true
                 mediumGameButton.isHidden = true
                 largeGameButton.isHidden = true
+                switchNames.isHidden = true
             }
             
         }else if(playerOneInput.text == "" && playerTwoInput.text == ""){
@@ -81,6 +85,7 @@ class SettingsViewController: UIViewController {
             smallGameButton.isHidden = true
             mediumGameButton.isHidden = true
             largeGameButton.isHidden = true
+            switchNames.isHidden = true
         }
         
         
@@ -122,9 +127,26 @@ class SettingsViewController: UIViewController {
             mediumGameButton.isHidden = true
             largeGameButton.isHidden = true
             chooseGameBoardLabel.isHidden = true
+            switchNames.isHidden = true
         }
         
     }
+    
+    @IBAction func switchNamesAction(_ sender: Any) {
+        if let temp: String = playerOneInput.text{
+            playerOneInput.text = playerTwoInput.text
+            playerTwoInput.text = temp
+            UserDefaults.standard.set(playerOneInput.text, forKey: "PlayerOne")
+            checkIfNamesArePresent()
+            self.view.endEditing(true)
+            UserDefaults.standard.set(playerTwoInput.text, forKey: "PlayerTwo")
+            checkIfNamesArePresent()
+            self.view.endEditing(true);
+        }
+       
+        
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //cruch noise

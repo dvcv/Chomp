@@ -117,12 +117,13 @@ class MainMediumGameViewController: UIViewController {
         emojiLabel.isHidden = true
         foilBackground.isHidden = false
         nextPlayer.isHidden = false
+        nextPlayer.text = players[0]
         nextLabel.isHidden = false
     }
     
     
     @IBAction func howToPlayButton(_ sender: Any) {
-        let alert = UIAlertController(title: "How To Play", message: "Tap on a chocolate square to eat all chocolates above and to the right. Force the other player to eat the green poison chocolate.", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "How To Play", message: "Tap on a chocolate square to eat all chocolates above and to the right of it. Force the other player to eat the green poison chocolate.", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Got it!", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }

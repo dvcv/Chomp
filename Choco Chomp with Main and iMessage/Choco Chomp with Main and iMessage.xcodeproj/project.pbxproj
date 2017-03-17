@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A1B96EA1E7BB8BA00321CDF /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B96E91E7BB8BA00321CDF /* HowToPlayViewController.swift */; };
+		1A45CF0F1E77881300FB4B4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A45CF0E1E77881300FB4B4A /* Assets.xcassets */; };
 		1A55CFB71E70AF7A00129050 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A55CFB61E70AF7A00129050 /* GoogleService-Info.plist */; };
 		1A55CFB91E70C2BC00129050 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A55CFB81E70C2BC00129050 /* GoogleService-Info.plist */; };
 		1A74DA011E6B8350009612E0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A74DA001E6B8350009612E0 /* SettingsViewController.swift */; };
@@ -26,7 +28,6 @@
 		1AA874651E6AC95200BBAD48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA874631E6AC95200BBAD48 /* LaunchScreen.storyboard */; };
 		1AA874731E6AC97900BBAD48 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA874721E6AC97900BBAD48 /* Messages.framework */; };
 		1AA874761E6AC97900BBAD48 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA874751E6AC97900BBAD48 /* MessagesViewController.swift */; };
-		1AA8747B1E6AC97900BBAD48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AA8747A1E6AC97900BBAD48 /* Assets.xcassets */; };
 		1AA8747F1E6AC97900BBAD48 /* iMessage.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1AA874701E6AC97900BBAD48 /* iMessage.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1AA874851E6ACA7200BBAD48 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA874841E6ACA7200BBAD48 /* Snapshot.swift */; };
 		1AA874871E6ACA9C00BBAD48 /* MediumGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA874861E6ACA9C00BBAD48 /* MediumGameViewController.swift */; };
@@ -64,6 +65,8 @@
 
 /* Begin PBXFileReference section */
 		04CBF8E2AD87275398EBC8E1 /* Pods_Choco_Chomp_with_Main_and_iMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Choco_Chomp_with_Main_and_iMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A1B96E91E7BB8BA00321CDF /* HowToPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
+		1A45CF0E1E77881300FB4B4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A55CFB61E70AF7A00129050 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1A55CFB81E70C2BC00129050 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1A74DA001E6B8350009612E0 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -86,7 +89,6 @@
 		1AA874701E6AC97900BBAD48 /* iMessage.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iMessage.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA874721E6AC97900BBAD48 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		1AA874751E6AC97900BBAD48 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
-		1AA8747A1E6AC97900BBAD48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AA8747C1E6AC97900BBAD48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AA874841E6ACA7200BBAD48 /* Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
 		1AA874861E6ACA9C00BBAD48 /* MediumGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediumGameViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				1AA23E941E70DC3700ABDE3E /* Noises.swift */,
 				1AA23E8F1E70DB6900ABDE3E /* Sounds */,
 				1AA8745E1E6AC95200BBAD48 /* Main.storyboard */,
+				1A1B96E91E7BB8BA00321CDF /* HowToPlayViewController.swift */,
 				1AA874611E6AC95200BBAD48 /* Assets.xcassets */,
 				1AA874631E6AC95200BBAD48 /* LaunchScreen.storyboard */,
 				1AA874661E6AC95200BBAD48 /* Info.plist */,
@@ -200,9 +203,9 @@
 				1AA874841E6ACA7200BBAD48 /* Snapshot.swift */,
 				1AA874861E6ACA9C00BBAD48 /* MediumGameViewController.swift */,
 				1AA23E9D1E70F3E400ABDE3E /* MainInterface.storyboard */,
+				1A45CF0E1E77881300FB4B4A /* Assets.xcassets */,
 				1AA23E981E70EFFF00ABDE3E /* Sounds */,
 				1AA874881E6ACAC300BBAD48 /* GameModel.swift */,
-				1AA8747A1E6AC97900BBAD48 /* Assets.xcassets */,
 				1A55CFB81E70C2BC00129050 /* GoogleService-Info.plist */,
 				1AA8747C1E6AC97900BBAD48 /* Info.plist */,
 			);
@@ -323,11 +326,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AA8747B1E6AC97900BBAD48 /* Assets.xcassets in Resources */,
 				1AA23EAD1E71329100ABDE3E /* crunch.wav in Resources */,
 				1AA23E9E1E70F3E400ABDE3E /* MainInterface.storyboard in Resources */,
 				1A55CFB91E70C2BC00129050 /* GoogleService-Info.plist in Resources */,
 				1AA23EAE1E71329100ABDE3E /* loser.wav in Resources */,
+				1A45CF0F1E77881300FB4B4A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +424,7 @@
 				1AA8745D1E6AC95200BBAD48 /* ViewController.swift in Sources */,
 				1AA8748D1E6ADBBB00BBAD48 /* MediumGameViewController.swift in Sources */,
 				1AA8748F1E6B748B00BBAD48 /* SmallGameViewController.swift in Sources */,
+				1A1B96EA1E7BB8BA00321CDF /* HowToPlayViewController.swift in Sources */,
 				1A74DA011E6B8350009612E0 /* SettingsViewController.swift in Sources */,
 				1AA8745B1E6AC95200BBAD48 /* AppDelegate.swift in Sources */,
 				1A74DA051E6C19CC009612E0 /* MainLargeGameViewController.swift in Sources */,
@@ -571,10 +575,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Q369DPKX8R;
 				INFOPLIST_FILE = "Choco Chomp with Main and iMessage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.davidchavez.Choco-Chomp-with-Main-and-iMessage";
+				PRODUCT_BUNDLE_IDENTIFIER = com.david.chavez.choco.chomp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -586,10 +591,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Q369DPKX8R;
 				INFOPLIST_FILE = "Choco Chomp with Main and iMessage/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.davidchavez.Choco-Chomp-with-Main-and-iMessage";
+				PRODUCT_BUNDLE_IDENTIFIER = com.david.chavez.choco.chomp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

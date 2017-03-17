@@ -31,6 +31,7 @@ class Noises{
     }
     
     func playCrunchNoise(){
+        crunchNoise.stop()
         crunchNoise.currentTime = 0
         crunchNoise.play()
     }
