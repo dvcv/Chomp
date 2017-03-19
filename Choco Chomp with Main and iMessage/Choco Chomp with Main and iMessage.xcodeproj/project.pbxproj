@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A1B96EA1E7BB8BA00321CDF /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B96E91E7BB8BA00321CDF /* HowToPlayViewController.swift */; };
+		1A1B96F41E7E0DBA00321CDF /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B96F31E7E0DBA00321CDF /* InstructionsViewController.swift */; };
+		1A1B96FB1E7E228300321CDF /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A1B96FA1E7E228300321CDF /* Slide.xib */; };
+		1A1B96FD1E7E22B100321CDF /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B96FC1E7E22B100321CDF /* Slide.swift */; };
 		1A45CF0F1E77881300FB4B4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A45CF0E1E77881300FB4B4A /* Assets.xcassets */; };
 		1A55CFB71E70AF7A00129050 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A55CFB61E70AF7A00129050 /* GoogleService-Info.plist */; };
 		1A55CFB91E70C2BC00129050 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A55CFB81E70C2BC00129050 /* GoogleService-Info.plist */; };
@@ -65,7 +67,9 @@
 
 /* Begin PBXFileReference section */
 		04CBF8E2AD87275398EBC8E1 /* Pods_Choco_Chomp_with_Main_and_iMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Choco_Chomp_with_Main_and_iMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A1B96E91E7BB8BA00321CDF /* HowToPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
+		1A1B96F31E7E0DBA00321CDF /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
+		1A1B96FA1E7E228300321CDF /* Slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		1A1B96FC1E7E22B100321CDF /* Slide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		1A45CF0E1E77881300FB4B4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A55CFB61E70AF7A00129050 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1A55CFB81E70C2BC00129050 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -124,6 +128,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A1B96F91E7E225900321CDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A1B96FA1E7E228300321CDF /* Slide.xib */,
+				1A1B96FC1E7E22B100321CDF /* Slide.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		1AA23E8F1E70DB6900ABDE3E /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,16 +180,17 @@
 			children = (
 				1AA8745A1E6AC95200BBAD48 /* AppDelegate.swift */,
 				1AA8745C1E6AC95200BBAD48 /* ViewController.swift */,
+				1AA23E941E70DC3700ABDE3E /* Noises.swift */,
+				1A1B96F91E7E225900321CDF /* View */,
 				1A74DA021E6BB09C009612E0 /* MainGameModel.swift */,
 				1A74DA041E6C19CC009612E0 /* MainLargeGameViewController.swift */,
 				1AA8748C1E6ADBBA00BBAD48 /* MediumGameViewController.swift */,
 				1AA8748E1E6B748B00BBAD48 /* SmallGameViewController.swift */,
 				1A74DA001E6B8350009612E0 /* SettingsViewController.swift */,
-				1AA23E941E70DC3700ABDE3E /* Noises.swift */,
-				1AA23E8F1E70DB6900ABDE3E /* Sounds */,
+				1A1B96F31E7E0DBA00321CDF /* InstructionsViewController.swift */,
 				1AA8745E1E6AC95200BBAD48 /* Main.storyboard */,
-				1A1B96E91E7BB8BA00321CDF /* HowToPlayViewController.swift */,
 				1AA874611E6AC95200BBAD48 /* Assets.xcassets */,
+				1AA23E8F1E70DB6900ABDE3E /* Sounds */,
 				1AA874631E6AC95200BBAD48 /* LaunchScreen.storyboard */,
 				1AA874661E6AC95200BBAD48 /* Info.plist */,
 				1A55CFB61E70AF7A00129050 /* GoogleService-Info.plist */,
@@ -316,6 +330,7 @@
 				1AA23EA91E71328000ABDE3E /* crunch.wav in Resources */,
 				1AA874651E6AC95200BBAD48 /* LaunchScreen.storyboard in Resources */,
 				1A55CFB71E70AF7A00129050 /* GoogleService-Info.plist in Resources */,
+				1A1B96FB1E7E228300321CDF /* Slide.xib in Resources */,
 				1AA874621E6AC95200BBAD48 /* Assets.xcassets in Resources */,
 				1AA23EAA1E71328000ABDE3E /* loser.wav in Resources */,
 				1AA874601E6AC95200BBAD48 /* Main.storyboard in Resources */,
@@ -422,12 +437,13 @@
 				1AA23E951E70DC3700ABDE3E /* Noises.swift in Sources */,
 				1A74DA031E6BB09C009612E0 /* MainGameModel.swift in Sources */,
 				1AA8745D1E6AC95200BBAD48 /* ViewController.swift in Sources */,
+				1A1B96F41E7E0DBA00321CDF /* InstructionsViewController.swift in Sources */,
 				1AA8748D1E6ADBBB00BBAD48 /* MediumGameViewController.swift in Sources */,
 				1AA8748F1E6B748B00BBAD48 /* SmallGameViewController.swift in Sources */,
-				1A1B96EA1E7BB8BA00321CDF /* HowToPlayViewController.swift in Sources */,
 				1A74DA011E6B8350009612E0 /* SettingsViewController.swift in Sources */,
 				1AA8745B1E6AC95200BBAD48 /* AppDelegate.swift in Sources */,
 				1A74DA051E6C19CC009612E0 /* MainLargeGameViewController.swift in Sources */,
+				1A1B96FD1E7E22B100321CDF /* Slide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

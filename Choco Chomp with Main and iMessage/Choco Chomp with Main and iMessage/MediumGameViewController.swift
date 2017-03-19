@@ -89,6 +89,7 @@ class MainMediumGameViewController: UIViewController {
             }
             //change next player
             nextPlayer.text = nextPlayer.text == players[0] ? players[1] : players[0]
+            nextLabel.text = nextPlayer.text == players[0] ? "Player 1:" : "Player 2:"
         }
     
 
@@ -119,6 +120,7 @@ class MainMediumGameViewController: UIViewController {
         nextPlayer.isHidden = false
         nextPlayer.text = players[0]
         nextLabel.isHidden = false
+        nextLabel.text = "Player 1:"
     }
     
     
