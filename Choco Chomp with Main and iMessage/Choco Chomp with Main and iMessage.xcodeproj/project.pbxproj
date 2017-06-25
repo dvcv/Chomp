@@ -128,18 +128,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A1B96F91E7E225900321CDF /* View */ = {
+		1A1B96F91E7E225900321CDF /* InstructionsSlide */ = {
 			isa = PBXGroup;
 			children = (
 				1A1B96FA1E7E228300321CDF /* Slide.xib */,
 				1A1B96FC1E7E22B100321CDF /* Slide.swift */,
 			);
-			name = View;
+			name = InstructionsSlide;
 			sourceTree = "<group>";
 		};
 		1AA23E8F1E70DB6900ABDE3E /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				1AA23E941E70DC3700ABDE3E /* Noises.swift */,
+				1AA874611E6AC95200BBAD48 /* Assets.xcassets */,
 				1AA23EA71E71328000ABDE3E /* crunch.wav */,
 				1AA23EA81E71328000ABDE3E /* loser.wav */,
 			);
@@ -179,18 +181,12 @@
 			isa = PBXGroup;
 			children = (
 				1AA8745A1E6AC95200BBAD48 /* AppDelegate.swift */,
-				1AA8745C1E6AC95200BBAD48 /* ViewController.swift */,
-				1AA23E941E70DC3700ABDE3E /* Noises.swift */,
-				1A1B96F91E7E225900321CDF /* View */,
-				1A74DA021E6BB09C009612E0 /* MainGameModel.swift */,
-				1A74DA041E6C19CC009612E0 /* MainLargeGameViewController.swift */,
-				1AA8748C1E6ADBBA00BBAD48 /* MediumGameViewController.swift */,
-				1AA8748E1E6B748B00BBAD48 /* SmallGameViewController.swift */,
-				1A74DA001E6B8350009612E0 /* SettingsViewController.swift */,
-				1A1B96F31E7E0DBA00321CDF /* InstructionsViewController.swift */,
-				1AA8745E1E6AC95200BBAD48 /* Main.storyboard */,
-				1AA874611E6AC95200BBAD48 /* Assets.xcassets */,
+				1AF19EFF1E7F990C001677DC /* Controllers */,
+				1AF19EFD1E7F9891001677DC /* BoardGamesControllers */,
+				1A1B96F91E7E225900321CDF /* InstructionsSlide */,
+				1AF19EFE1E7F98D6001677DC /* Model */,
 				1AA23E8F1E70DB6900ABDE3E /* Sounds */,
+				1AA8745E1E6AC95200BBAD48 /* Main.storyboard */,
 				1AA874631E6AC95200BBAD48 /* LaunchScreen.storyboard */,
 				1AA874661E6AC95200BBAD48 /* Info.plist */,
 				1A55CFB61E70AF7A00129050 /* GoogleService-Info.plist */,
@@ -224,6 +220,34 @@
 				1AA8747C1E6AC97900BBAD48 /* Info.plist */,
 			);
 			path = iMessage;
+			sourceTree = "<group>";
+		};
+		1AF19EFD1E7F9891001677DC /* BoardGamesControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A74DA041E6C19CC009612E0 /* MainLargeGameViewController.swift */,
+				1AA8748C1E6ADBBA00BBAD48 /* MediumGameViewController.swift */,
+				1AA8748E1E6B748B00BBAD48 /* SmallGameViewController.swift */,
+			);
+			name = BoardGamesControllers;
+			sourceTree = "<group>";
+		};
+		1AF19EFE1E7F98D6001677DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A74DA021E6BB09C009612E0 /* MainGameModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1AF19EFF1E7F990C001677DC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1AA8745C1E6AC95200BBAD48 /* ViewController.swift */,
+				1A74DA001E6B8350009612E0 /* SettingsViewController.swift */,
+				1A1B96F31E7E0DBA00321CDF /* InstructionsViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		813A0FDF131D1D3F22CF2475 /* Pods */ = {
