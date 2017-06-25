@@ -1,2 +1,2 @@
-# Chomp
-![](image 1.png?raw=true "Menu")
+# Choco Chomp
+![](Image1.png?raw=true "Choco Chomp")
